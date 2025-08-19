@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Notifikasi - Sareo E-commerce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome -->
+    <!-- Custom CSS -->
+    <link href="css/rstyle.css" rel="stylesheet" />
+    <link href="css/rresponsive-fix.css" rel="stylesheet" />
+    <link href="css/rtailwind-responsive.css" rel="stylesheet" />
+
+    <link href="css/notification.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Load navbar + show/hide user buttons -->
+  <script src="navbar.js"></script>
+
+
+    <!-- Main Content -->
+    <main class="notification-container">
+        <div class="container">
+            <!-- Header -->
+            <div class="notification-header">
+                <h1>Notifikasi</h1>
+                <p>Kelola semua notifikasi dan pemberitahuan penting Anda di sini</p>
+            </div>
+            <!-- Filters -->
+            <div class="notification-filters">
+                <div class="filter-buttons">
+                    <a class="filter-btn active" data-filter="all" href="#">Semua</a>
+                    <a class="filter-btn" data-filter="unread" href="#">Belum Dibaca</a>
+                    <a class="filter-btn" data-filter="order" href="#">Pesanan</a>
+                    <a class="filter-btn" data-filter="promo" href="#">Promosi</a>
+                    <a class="filter-btn" data-filter="info" href="#">Informasi</a>
+                </div>
+            </div>
+            <!-- Notification List -->
+            <div class="notification-list" id="notificationList">
+                <!-- Notification 1 - Unread -->
+                <div class="notification-item unread">
+                    <div class="notification-icon order">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Pesanan Dikonfirmasi</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="unread-badge"></div>
+                                <button class="mark-read-btn">Tandai sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Pesanan #WS-2025-001 telah dikonfirmasi dan sedang diproses.
+                            Estimasi pengiriman 2-3 hari kerja.</div>
+                        <div class="notification-time">2 menit yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="order-detail.html">Lihat Detail</a>
+                            <a class="notification-btn btn-secondary-notif" href="#">Lacak Pesanan</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 2 - Unread -->
+                <div class="notification-item unread">
+                    <div class="notification-icon promo">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Flash Sale Hari Ini!</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="unread-badge"></div>
+                                <button class="mark-read-btn">Tandai sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Dapatkan diskon hingga 50% untuk semua produk skincare. Promo
+                            terbatas hanya sampai pukul 23:59 WIB.</div>
+                        <div class="notification-time">1 jam yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="shop.html">Belanja Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 3 - Unread -->
+                <div class="notification-item unread">
+                    <div class="notification-icon order">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Pesanan Dikirim</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="unread-badge"></div>
+                                <button class="mark-read-btn">Tandai sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Pesanan #WS-2025-002 telah dikirim melalui JNE dengan nomor
+                            resi JNE123456789.</div>
+                        <div class="notification-time">3 jam yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="#">Lacak Paket</a>
+                            <a class="notification-btn btn-secondary-notif" href="order-detail.html">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 4 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Produk Baru Tersedia</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Koleksi terbaru dari Jenauli telah tersedia! Temukan produk
+                            skincare dengan formula terdepan.</div>
+                        <div class="notification-time">1 hari yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="shop.html?brand=jenauli">Lihat
+                                Produk</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 5 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon order">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Pesanan Telah Sampai</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Pesanan #WS-2025-003 telah sampai di tujuan. Jangan lupa
+                            berikan ulasan untuk produk yang Anda beli.</div>
+                        <div class="notification-time">2 hari yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="#">Beri Ulasan</a>
+                            <a class="notification-btn btn-secondary-notif" href="shop.html">Beli Lagi</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 6 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon promo">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Cashback 20% untuk Member</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Dapatkan cashback 20% untuk pembelian minimum Rp 500.000.
+                            Berlaku hingga akhir bulan.</div>
+                        <div class="notification-time">3 hari yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="shop.html">Claim Promo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 7 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Tips Perawatan Kulit</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Artikel baru tersedia: "5 Langkah Perawatan Kulit untuk
+                            Remaja". Baca sekarang dan dapatkan kulit sehat.</div>
+                        <div class="notification-time">4 hari yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="tips-kecantikan.html">Baca Artikel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 8 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Metode Pembayaran Gagal</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Pembayaran untuk pesanan #WS-2025-004 gagal diproses. Silakan
+                            coba metode pembayaran lain.</div>
+                        <div class="notification-time">5 hari yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="checkout.html">Bayar Sekarang</a>
+                            <a class="notification-btn btn-secondary-notif" href="#">Ganti Metode</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 9 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon info">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Update Kebijakan Privasi</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Kami telah memperbarui kebijakan privasi. Silakan baca
+                            perubahan terbaru untuk informasi lengkap.</div>
+                        <div class="notification-time">1 minggu yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="#">Baca Kebijakan</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification 10 - Read -->
+                <div class="notification-item">
+                    <div class="notification-icon promo">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <div class="notification-content">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div class="notification-title">Program Referral</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="mark-read-btn">Sudah dibaca</button>
+                            </div>
+                        </div>
+                        <div class="notification-message">Ajak teman berbelanja dan dapatkan voucher Rp 50.000 untuk
+                            setiap referral yang berhasil.</div>
+                        <div class="notification-time">1 minggu yang lalu</div>
+                        <div class="notification-actions">
+                            <a class="notification-btn btn-primary-notif" href="#">Ajak Teman</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/icon-fix.js"></script>
+
+    
+</body>
+
+</html>

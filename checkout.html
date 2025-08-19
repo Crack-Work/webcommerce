@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout - Sareo E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/rstyle.css" rel="stylesheet" />
+    <link href="css/rresponsive-fix.css" rel="stylesheet" />
+    <link href="css/rtailwind-responsive.css" rel="stylesheet" />
+    <link href="css/checkout_style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+    
+    <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Load navbar + show/hide user buttons -->
+  <script src="navbar.js"></script>
+
+    <!-- Checkout Content -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4">Checkout</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <form id="checkout-form">
+                    <!-- Shipping Information -->
+                    <div class="card mb-4 c34">
+                        <!-- Header Section -->
+                        <div class="margin-wrap c35">
+                            <h3 class="c36">Shipping Information</h3>
+                        </div>
+                        <!-- Shipping Method Selection -->
+                        <div class="mb-4">
+                            <label class="form-label c37">Pilih Metode Pengiriman</label>
+                            <div class="shipping-methods">
+                                <!-- Dropship Option -->
+                                <div class="shipping-option c38" onclick="selectShippingMethod('dropship')">
+                                    <div class="form-check">
+                                        <input checked="" class="form-check-input c39" id="dropshipMethod"
+                                            name="shippingMethod" type="radio" value="dropship" />
+                                        <label class="form-check-label w-100 c40" for="dropshipMethod">
+                                            <div class="d-flex align-items-center">
+                                                <div class="shipping-icon me-3 c41">
+                                                    <i class="fas fa-edit c42"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="c43">Dropship</div>
+                                                    <small class="c44">Input alamat pengiriman manual</small>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Saved Address Option -->
+                                <div class="shipping-option c38" onclick="selectShippingMethod('saved')">
+                                    <div class="form-check">
+                                        <input class="form-check-input c39" id="savedAddressMethod"
+                                            name="shippingMethod" type="radio" value="saved" />
+                                        <label class="form-check-label w-100 c40" for="savedAddressMethod">
+                                            <div class="d-flex align-items-center">
+                                                <div class="shipping-icon me-3 c45">
+                                                    <i class="fas fa-bookmark c42"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="c43">Saved Address</div>
+                                                    <small class="c44">Gunakan alamat yang tersimpan</small>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dropship Form -->
+                        <div class="shipping-form c46" id="dropshipForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label c47" for="shippingFirstName">Nama Depan</label>
+                                    <input class="form-control c48" id="shippingFirstName" placeholder="Anindya"
+                                        required="" type="text" />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label c47" for="shippingLastName">Nama Belakang</label>
+                                    <input class="form-control c48" id="shippingLastName" placeholder="Putri"
+                                        required="" type="text" />
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label c47" for="shippingAddress">Alamat Lengkap</label>
+                                    <input class="form-control c48" id="shippingAddress"
+                                        placeholder="Jl. Sudirman No. 123, RT 01/RW 05" required="" type="text" />
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label c47" for="shippingCity">Kota</label>
+                                    <input class="form-control c48" id="shippingCity" placeholder="Jakarta Pusat"
+                                        required="" type="text" />
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label c47" for="shippingState">Provinsi</label>
+                                    <select class="form-select c48" id="shippingState" required="">
+                                        <option value="">Pilih Provinsi...</option>
+                                        <option value="Jakarta">DKI Jakarta</option>
+                                        <option value="Jawa Barat">Jawa Barat</option>
+                                        <option value="Jawa Tengah">Jawa Tengah</option>
+                                        <option value="Jawa Timur">Jawa Timur</option>
+                                        <option value="Banten">Banten</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label c47" for="shippingZip">Kode Pos</label>
+                                    <input class="form-control c48" id="shippingZip" placeholder="10310" required=""
+                                        type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Saved Address Display -->
+                        <div class="saved-addresses c49" id="savedAddressesForm">
+                            <div class="selected-address-card mb-3 c50" id="selectedAddressCard">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h6 class="c51">
+                                            <i class="fas fa-home me-2 c52"></i>Alamat Utama
+                                        </h6>
+                                        <p class="c53">Anindya Putri</p>
+                                        <p class="c54">Jl. Sudirman No. 123, RT 01/RW 05</p>
+                                        <p class="c54">Jakarta Pusat, DKI Jakarta 10310</p>
+                                        <p class="c55">+62 812-3456-7890</p>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm c56" onclick="changeAddress()"
+                                        type="button">
+                                        <i class="fas fa-edit me-1"></i>Ganti
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Address Selection Modal Content (Initially Hidden) -->
+                            <div class="c49" id="addressSelection">
+                                <h6 class="c57">Pilih Alamat Pengiriman</h6>
+                                <!-- Address Option 1 -->
+                                <div class="address-option c38" onclick="selectAddress('home')">
+                                    <div class="form-check">
+                                        <input checked="" class="form-check-input" id="homeAddress" name="addressOption"
+                                            type="radio" value="home" />
+                                        <label class="form-check-label w-100 c40" for="homeAddress">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h6 class="c58">
+                                                        <i class="fas fa-home me-2 c52"></i>Alamat Utama
+                                                    </h6>
+                                                    <p class="c59">Anindya Putri</p>
+                                                    <p class="c60">Jl. Sudirman No. 123, RT 01/RW 05</p>
+                                                    <p class="c60">Jakarta Pusat, DKI Jakarta 10310</p>
+                                                    <p class="c61">+62 812-3456-7890</p>
+                                                </div>
+                                                <span class="badge bg-success c62">Utama</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Address Option 2 -->
+                                <div class="address-option c38" onclick="selectAddress('office')">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="officeAddress" name="addressOption"
+                                            type="radio" value="office" />
+                                        <label class="form-check-label w-100 c40" for="officeAddress">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h6 class="c58">
+                                                        <i class="fas fa-building me-2 c63"></i>Alamat Kantor
+                                                    </h6>
+                                                    <p class="c59">Anindya Putri</p>
+                                                    <p class="c60">Jl. Thamrin No. 456, Lantai 12</p>
+                                                    <p class="c60">Jakarta Pusat, DKI Jakarta 10240</p>
+                                                    <p class="c61">+62 812-3456-7890</p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Address Option 3 -->
+                                <div class="address-option c38" onclick="selectAddress('parent')">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="parentAddress" name="addressOption"
+                                            type="radio" value="parent" />
+                                        <label class="form-check-label w-100 c40" for="parentAddress">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h6 class="c58">
+                                                        <i class="fas fa-heart me-2 c64"></i>Rumah Orangtua
+                                                    </h6>
+                                                    <p class="c59">Bapak Suhardi</p>
+                                                    <p class="c60">Jl. Merdeka No. 789, RT 02/RW 03</p>
+                                                    <p class="c60">Bandung, Jawa Barat 40111</p>
+                                                    <p class="c61">+62 812-9876-5432</p>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Confirm Button -->
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-success c65" onclick="confirmAddressSelection()"
+                                        type="button">
+                                        <i class="fas fa-check me-2"></i>Konfirmasi Alamat
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shipment Type -->
+                    <div class="card mb-4 c34">
+                        <!-- Header Section -->
+                        <div class="margin-wrap c35">
+                            <h3 class="c36">Shipment Type</h3>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label c37">Pilih Jenis Kurir</label>
+                            <div class="courier-methods">
+                                <!-- JNE Option -->
+                                <div class="courier-option c38" onclick="selectCourier('jne')">
+                                    <div class="form-check">
+                                        <input checked="" class="form-check-input c39" id="jneCourier"
+                                            name="courierMethod" type="radio" value="jne" />
+                                        <label class="form-check-label w-100 c40" for="jneCourier">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="courier-icon me-3 c66">
+                                                        <span class="c67">JNE</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">JNE Regular</div>
+                                                        <small class="c44">2-3 hari kerja</small>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="c43">Rp 15.000</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- JNT Option -->
+                                <div class="courier-option c38" onclick="selectCourier('jnt')">
+                                    <div class="form-check">
+                                        <input class="form-check-input c39" id="jntCourier" name="courierMethod"
+                                            type="radio" value="jnt" />
+                                        <label class="form-check-label w-100 c40" for="jntCourier">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="courier-icon me-3 c68">
+                                                        <span class="c67">J&amp;T</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">J&amp;T Express</div>
+                                                        <small class="c44">1-2 hari kerja</small>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="c43">Rp 12.000</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- SiCepat Option -->
+                                <div class="courier-option c38" onclick="selectCourier('sicepat')">
+                                    <div class="form-check">
+                                        <input class="form-check-input c39" id="sicepatCourier" name="courierMethod"
+                                            type="radio" value="sicepat" />
+                                        <label class="form-check-label w-100 c40" for="sicepatCourier">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="courier-icon me-3 c69">
+                                                        <span class="c70">SiCepat</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">SiCepat Regular</div>
+                                                        <small class="c44">2-4 hari kerja</small>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="c43">Rp 13.000</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Grab Express Option -->
+                                <div class="courier-option c38" onclick="selectCourier('grab')">
+                                    <div class="form-check">
+                                        <input class="form-check-input c39" id="grabCourier" name="courierMethod"
+                                            type="radio" value="grab" />
+                                        <label class="form-check-label w-100 c40" for="grabCourier">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="courier-icon me-3 c71">
+                                                        <span class="c70">Grab</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">Grab Express</div>
+                                                        <small class="c44">Same day delivery</small>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <div class="c43">Rp 25.000</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Payment Information -->
+                    <div class="card mb-4 c34">
+                        <!-- Header Section -->
+                        <div class="margin-wrap c35">
+                            <h3 class="c36">Payment Information</h3>
+                        </div>
+                        <div class="payment-form">
+                            <div class="mb-4">
+                                <label class="form-label c37">Pilih Metode Pembayaran</label>
+                                <div class="payment-methods">
+                                    <!-- Bank Transfer Option -->
+                                    <div class="payment-option c38" onclick="selectPaymentMethod('bank')">
+                                        <div class="form-check">
+                                            <input class="form-check-input c39" id="bankTransfer" name="paymentMethod"
+                                                type="radio" value="bank" />
+                                            <label class="form-check-label w-100 c40" for="bankTransfer">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="payment-icon me-3 c41">
+                                                        <i class="fas fa-university c42"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">Transfer Bank</div>
+                                                        <small class="c44">BCA, Mandiri, BNI, BRI</small>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- Digital Wallet Option -->
+                                    <div class="payment-option c38" onclick="selectPaymentMethod('wallet')">
+                                        <div class="form-check">
+                                            <input class="form-check-input c39" id="digitalWallet" name="paymentMethod"
+                                                type="radio" value="wallet" />
+                                            <label class="form-check-label w-100 c40" for="digitalWallet">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="payment-icon me-3 c45">
+                                                        <i class="fas fa-mobile-alt c42"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">Dompet Digital</div>
+                                                        <small class="c44">OVO, GoPay, DANA, ShopeePay</small>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- Credit Card Option -->
+                                    <div class="payment-option c38" onclick="selectPaymentMethod('credit')">
+                                        <div class="form-check">
+                                            <input class="form-check-input c39" id="creditCard" name="paymentMethod"
+                                                type="radio" value="credit" />
+                                            <label class="form-check-label w-100 c40" for="creditCard">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="payment-icon me-3 c72">
+                                                        <i class="fas fa-credit-card c42"></i>
+                                                    </div>
+                                                    <div>
+                                                        <div class="c43">Kartu Kredit/Debit</div>
+                                                        <small class="c44">Visa, Mastercard, JCB</small>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Payment Details Based on Selection -->
+                            <div class="c73" id="paymentDetails">
+                                <!-- Bank Transfer Details -->
+                                <div class="c49" id="bankTransferDetails">
+                                    <h6 class="c57">Pilih Bank Tujuan</h6>
+                                    <div class="bank-options">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="bca" name="bankOption" type="radio"
+                                                value="bca" />
+                                            <label class="form-check-label c74" for="bca">
+                                                <strong>Bank BCA</strong> - 1234567890 a.n. WooShop Indonesia
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="mandiri" name="bankOption" type="radio"
+                                                value="mandiri" />
+                                            <label class="form-check-label c74" for="mandiri">
+                                                <strong>Bank Mandiri</strong> - 9876543210 a.n. WooShop Indonesia
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="bni" name="bankOption" type="radio"
+                                                value="bni" />
+                                            <label class="form-check-label c74" for="bni">
+                                                <strong>Bank BNI</strong> - 5555666677 a.n. WooShop Indonesia
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="alert alert-info c75">
+                                        <small class="c74">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            Transfer dalam 24 jam dan gunakan nomor order sebagai berita transfer.
+                                        </small>
+                                    </div>
+                                </div>
+                                <!-- Digital Wallet Details -->
+                                <div class="c49" id="digitalWalletDetails">
+                                    <h6 class="c57">Pilih Dompet Digital</h6>
+                                    <div class="wallet-options">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="ovo" name="walletOption" type="radio"
+                                                value="ovo" />
+                                            <label class="form-check-label c74" for="ovo">
+                                                <strong>OVO</strong> - Pembayaran langsung melalui aplikasi OVO
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="gopay" name="walletOption" type="radio"
+                                                value="gopay" />
+                                            <label class="form-check-label c74" for="gopay">
+                                                <strong>GoPay</strong> - Pembayaran melalui aplikasi Gojek
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="dana" name="walletOption" type="radio"
+                                                value="dana" />
+                                            <label class="form-check-label c74" for="dana">
+                                                <strong>DANA</strong> - Pembayaran melalui aplikasi DANA
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Credit Card Details -->
+                                <div class="c49" id="creditCardDetails">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label c76" for="cardNumber">Nomor Kartu</label>
+                                            <input class="form-control c48" id="cardNumber"
+                                                placeholder="1234 5678 9012 3456" type="text" />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label c76" for="expiryDate">Tanggal Kadaluarsa</label>
+                                            <input class="form-control c48" id="expiryDate" placeholder="MM/YY"
+                                                type="text" />
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label c76" for="cvv">CVV</label>
+                                            <input class="form-control c48" id="cvv" placeholder="123" type="text" />
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label c76" for="cardName">Nama di Kartu</label>
+                                            <input class="form-control c48" id="cardName" placeholder="Anindya Putri"
+                                                type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Voucher Section -->
+                    <div class="card mb-4 c34">
+                        <!-- Header Section -->
+                        <div class="margin-wrap c35">
+                            <h3 class="c36">Voucher</h3>
+                        </div>
+                        <!-- Manual Voucher Input -->
+                        <div class="mb-3">
+                            <label class="form-label c47" for="voucherCode">Masukkan Kode Voucher</label>
+                            <div class="input-group">
+                                <input class="form-control c77" id="voucherCode" placeholder="Masukkan kode voucher"
+                                    type="text" />
+                                <button class="btn btn-outline-primary c78" onclick="applyVoucher()" type="button">
+                                    <i class="fas fa-check me-1"></i>Terapkan
+                                </button>
+                            </div>
+                            <small class="text-muted c74">Masukkan kode voucher untuk mendapatkan diskon khusus</small>
+                        </div>
+                        <!-- Show Available Vouchers Button -->
+                        <div class="text-center mb-3">
+                            <button class="btn btn-link text-decoration-none c79" onclick="toggleAvailableVouchers()"
+                                type="button">
+                                <i class="fas fa-gift me-2"></i>Pilih Voucher Tersedia
+                                <i class="fas fa-chevron-down ms-2" id="voucherToggleIcon"></i>
+                            </button>
+                        </div>
+                        <!-- Available Vouchers (Initially Hidden) -->
+                        <div class="available-vouchers c49" id="availableVouchersSection">
+                            <!-- Voucher 1 -->
+                            <div class="voucher-card c80">
+                                <div class="voucher-pattern c81"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="c82">DISKON20</h6>
+                                        <p class="c83">Diskon 20% untuk pembelian min. Rp 200.000</p>
+                                        <small class="c84">Berlaku hingga 31 Agustus 2025</small>
+                                    </div>
+                                    <button class="btn btn-light btn-sm c85" onclick="selectVoucher('DISKON20', 20)"
+                                        type="button">
+                                        Gunakan
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Voucher 2 -->
+                            <div class="voucher-card c86">
+                                <div class="voucher-pattern c81"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="c82">GRATISONKIR</h6>
+                                        <p class="c83">Gratis ongkir untuk semua jenis kurir</p>
+                                        <small class="c84">Berlaku hingga 15 September 2025</small>
+                                    </div>
+                                    <button class="btn btn-light btn-sm c87"
+                                        onclick="selectVoucher('GRATISONKIR', 'free_shipping')" type="button">
+                                        Gunakan
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Voucher 3 -->
+                            <div class="voucher-card c88">
+                                <div class="voucher-pattern c81"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="c82">NEWUSER50</h6>
+                                        <p class="c83">Diskon Rp 50.000 untuk pengguna baru</p>
+                                        <small class="c84">Berlaku hingga 30 Oktober 2025</small>
+                                    </div>
+                                    <button class="btn btn-light btn-sm c89" onclick="selectVoucher('NEWUSER50', 50000)"
+                                        type="button">
+                                        Gunakan
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Applied Voucher Display -->
+                        <div class="c90" id="appliedVoucher">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="c91">
+                                        <i class="fas fa-check-circle me-2"></i>Voucher Diterapkan
+                                    </h6>
+                                    <p class="c92" id="appliedVoucherText"></p>
+                                </div>
+                                <button class="btn btn-outline-danger btn-sm c56" onclick="removeVoucher()"
+                                    type="button">
+                                    <i class="fas fa-times me-1"></i>Hapus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Order Notes -->
+                    <div class="checkout-section mb-4">
+                        <h4 class="mb-3">Order Notes</h4>
+                        <textarea class="form-control" placeholder="Special instructions for your order..."
+                            rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="order-summary">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Order Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="order-item d-flex justify-content-between mb-3">
+                                <div>
+                                    <h6 class="mb-1">Wireless Bluetooth Headphones</h6>
+                                    <small class="text-muted">Qty: 1</small>
+                                </div>
+                                <div>$79.99</div>
+                            </div>
+                            <div class="order-item d-flex justify-content-between mb-3">
+                                <div>
+                                    <h6 class="mb-1">Premium T-Shirt</h6>
+                                    <small class="text-muted">Qty: 2</small>
+                                </div>
+                                <div>$59.98</div>
+                            </div>
+                            <div class="order-item d-flex justify-content-between mb-3">
+                                <div>
+                                    <h6 class="mb-1">JavaScript Guide Book</h6>
+                                    <small class="text-muted">Qty: 1</small>
+                                </div>
+                                <div>$39.99</div>
+                            </div>
+                            <hr />
+                            <div class="summary-item d-flex justify-content-between">
+                                <span>Subtotal:</span>
+                                <span>$179.96</span>
+                            </div>
+                            <div class="summary-item d-flex justify-content-between">
+                                <span>Shipping:</span>
+                                <span class="text-success">Free</span>
+                            </div>
+                            <div class="summary-item d-flex justify-content-between">
+                                <span>Tax:</span>
+                                <span>$14.40</span>
+                            </div>
+                            <hr />
+                            <div class="summary-total d-flex justify-content-between">
+                                <strong>Total:</strong>
+                                <strong>$194.36</strong>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100" onclick="placeOrder()" type="submit" >
+                                <i class="fas fa-check me-2" href="order-confirmation.html"></i>Place Order
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Security Badge -->
+                    <div class="text-center mt-4">
+                        <div class="security-badge">
+                            <i class="fas fa-shield-alt text-success me-2"></i>
+                            <small class="text-muted">Secure SSL Encryption</small>
+                        </div>
+                        <div class="payment-icons mt-2">
+                            <i class="fab fa-cc-visa text-primary me-2"></i>
+                            <i class="fab fa-cc-mastercard text-warning me-2"></i>
+                            <i class="fab fa-cc-paypal text-info me-2"></i>
+                            <i class="fab fa-cc-amex text-success"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- No authentication needed - direct static navigation -->
+    <script src="js/main.js"></script>
+    <script>
+        // Shipping method selection functionality
+        function selectShippingMethod(method) {
+            // Reset all shipping options
+            document.querySelectorAll('.shipping-option').forEach(option => {
+                option.style.border = '1px solid #D1D5DB';
+            });
+
+            // Reset all radio buttons
+            document.querySelectorAll('input[name="shippingMethod"]').forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Hide all forms
+            document.getElementById('dropshipForm').style.display = 'none';
+            document.getElementById('savedAddressesForm').style.display = 'none';
+            document.getElementById('addressSelection').style.display = 'none';
+
+            // Activate selected method
+            if (method === 'dropship') {
+                document.getElementById('dropshipMethod').checked = true;
+                document.querySelector('[onclick="selectShippingMethod(\'dropship\')"]').style.border = '2px solid #2198D6';
+                document.getElementById('dropshipForm').style.display = 'block';
+            } else if (method === 'saved') {
+                document.getElementById('savedAddressMethod').checked = true;
+                document.querySelector('[onclick="selectShippingMethod(\'saved\')"]').style.border = '2px solid #4DD865';
+                document.getElementById('savedAddressesForm').style.display = 'block';
+            }
+        }
+
+        // Address selection functionality
+        function changeAddress() {
+            document.getElementById('selectedAddressCard').style.display = 'none';
+            document.getElementById('addressSelection').style.display = 'block';
+        }
+
+        function selectAddress(addressType) {
+            // Reset all address options
+            document.querySelectorAll('.address-option').forEach(option => {
+                option.style.border = '1px solid #D1D5DB';
+            });
+
+            // Reset all radio buttons
+            document.querySelectorAll('input[name="addressOption"]').forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Activate selected address
+            const selectedOption = document.querySelector(`[onclick="selectAddress('${addressType}')"]`);
+            const selectedRadio = document.getElementById(`${addressType}Address`);
+
+            selectedOption.style.border = '2px solid #4DD865';
+            selectedRadio.checked = true;
+        }
+
+        function confirmAddressSelection() {
+            const selectedAddress = document.querySelector('input[name="addressOption"]:checked');
+            if (!selectedAddress) return;
+
+            const addressType = selectedAddress.value;
+            const selectedCard = document.getElementById('selectedAddressCard');
+
+            // Update the selected address card based on choice
+            let addressData = {};
+
+            if (addressType === 'home') {
+                addressData = {
+                    icon: 'fas fa-home',
+                    color: '#4DD865',
+                    title: 'Alamat Utama',
+                    name: 'Anindya Putri',
+                    address: 'Jl. Sudirman No. 123, RT 01/RW 05',
+                    city: 'Jakarta Pusat, DKI Jakarta 10310',
+                    phone: '+62 812-3456-7890'
+                };
+            } else if (addressType === 'office') {
+                addressData = {
+                    icon: 'fas fa-building',
+                    color: '#FFB21A',
+                    title: 'Alamat Kantor',
+                    name: 'Anindya Putri',
+                    address: 'Jl. Thamrin No. 456, Lantai 12',
+                    city: 'Jakarta Pusat, DKI Jakarta 10240',
+                    phone: '+62 812-3456-7890'
+                };
+            } else if (addressType === 'parent') {
+                addressData = {
+                    icon: 'fas fa-heart',
+                    color: '#FF4D4D',
+                    title: 'Rumah Orangtua',
+                    name: 'Bapak Suhardi',
+                    address: 'Jl. Merdeka No. 789, RT 02/RW 03',
+                    city: 'Bandung, Jawa Barat 40111',
+                    phone: '+62 812-9876-5432'
+                };
+            }
+
+            // Update the card content
+            selectedCard.innerHTML = `
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h6 style="font-family: 'sans-serif'; font-weight: 600; color: #1F2937; margin-bottom: 8px;">
+                            <i class="${addressData.icon} me-2" style="color: ${addressData.color};"></i>${addressData.title}
+                        </h6>
+                        <p style="font-family: sans-serif; color: #374151; margin-bottom: 4px; font-weight: 500;">${addressData.name}</p>
+                        <p style="font-family: sans-serif; color: #6B7280; margin-bottom: 4px; font-size: 14px;">${addressData.address}</p>
+                        <p style="font-family: sans-serif; color: #6B7280; margin-bottom: 4px; font-size: 14px;">${addressData.city}</p>
+                        <p style="font-family: sans-serif; color: #6B7280; margin-bottom: 0; font-size: 14px;">${addressData.phone}</p>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="changeAddress()" style="border-radius: 8px; font-family: sans-serifs', sans-serif; font-weight: 500;">
+                        <i class="fas fa-edit me-1"></i>Ganti
+                    </button>
+                </div>
+            `;
+
+            // Show selected card and hide selection
+            document.getElementById('selectedAddressCard').style.display = 'block';
+            document.getElementById('addressSelection').style.display = 'none';
+        }
+
+        // Payment method selection functionality
+        function selectPaymentMethod(method) {
+            // Reset all payment options
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.style.border = '1px solid #D1D5DB';
+            });
+
+            // Reset all radio buttons
+            document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Hide all payment details
+            document.getElementById('paymentDetails').style.display = 'none';
+            document.getElementById('bankTransferDetails').style.display = 'none';
+            document.getElementById('digitalWalletDetails').style.display = 'none';
+            document.getElementById('creditCardDetails').style.display = 'none';
+
+            // Activate selected method
+            if (method === 'bank') {
+                document.getElementById('bankTransfer').checked = true;
+                document.querySelector('[onclick="selectPaymentMethod(\'bank\')"]').style.border = '2px solid #2198D6';
+                document.getElementById('paymentDetails').style.display = 'block';
+                document.getElementById('bankTransferDetails').style.display = 'block';
+            } else if (method === 'wallet') {
+                document.getElementById('digitalWallet').checked = true;
+                document.querySelector('[onclick="selectPaymentMethod(\'wallet\')"]').style.border = '2px solid #4DD865';
+                document.getElementById('paymentDetails').style.display = 'block';
+                document.getElementById('digitalWalletDetails').style.display = 'block';
+            } else if (method === 'credit') {
+                document.getElementById('creditCard').checked = true;
+                document.querySelector('[onclick="selectPaymentMethod(\'credit\')"]').style.border = '2px solid #FFB21A';
+                document.getElementById('paymentDetails').style.display = 'block';
+                document.getElementById('creditCardDetails').style.display = 'block';
+            }
+        }
+
+        // Courier selection functionality
+        function selectCourier(courier) {
+            // Reset all courier options
+            document.querySelectorAll('.courier-option').forEach(option => {
+                option.style.border = '1px solid #D1D5DB';
+            });
+
+            // Reset all radio buttons
+            document.querySelectorAll('input[name="courierMethod"]').forEach(radio => {
+                radio.checked = false;
+            });
+
+            // Activate selected courier
+            const selectedOption = document.querySelector(`[onclick="selectCourier('${courier}')"]`);
+            const selectedRadio = document.getElementById(`${courier}Courier`);
+
+            if (courier === 'jne') {
+                selectedOption.style.border = '2px solid #FF4D4D';
+            } else if (courier === 'jnt') {
+                selectedOption.style.border = '2px solid #2198D6';
+            } else if (courier === 'sicepat') {
+                selectedOption.style.border = '2px solid #4DD865';
+            } else if (courier === 'grab') {
+                selectedOption.style.border = '2px solid #00B14F';
+            }
+
+            selectedRadio.checked = true;
+
+            // Update shipping cost in order summary (if needed)
+            updateShippingCost(courier);
+        }
+
+        function updateShippingCost(courier) {
+            const costs = {
+                'jne': 15000,
+                'jnt': 12000,
+                'sicepat': 13000,
+                'grab': 25000
+            };
+
+            // Update shipping cost display (this would update the order summary)
+            const shippingCost = costs[courier];
+            console.log(`Shipping cost updated to: Rp ${shippingCost.toLocaleString('id-ID')}`);
+        }
+
+        // Voucher functionality
+        let appliedVoucherData = null;
+
+        function applyVoucher() {
+            const voucherCode = document.getElementById('voucherCode').value.trim().toUpperCase();
+
+            if (!voucherCode) {
+                alert('Silakan masukkan kode voucher');
+                return;
+            }
+
+            // Check if voucher code is valid
+            const validVouchers = {
+                'DISKON20': { type: 'percentage', value: 20, description: 'Diskon 20%' },
+                'GRATISONKIR': { type: 'free_shipping', value: 'free_shipping', description: 'Gratis ongkir' },
+                'NEWUSER50': { type: 'fixed', value: 50000, description: 'Diskon Rp 50.000' }
+            };
+
+            if (validVouchers[voucherCode]) {
+                selectVoucher(voucherCode, validVouchers[voucherCode].value);
+                document.getElementById('voucherCode').value = '';
+            } else {
+                alert('Kode voucher tidak valid atau sudah kadaluarsa');
+            }
+        }
+
+        // Toggle available vouchers visibility
+        function toggleAvailableVouchers() {
+            const vouchersSection = document.getElementById('availableVouchersSection');
+            const toggleIcon = document.getElementById('voucherToggleIcon');
+
+            if (vouchersSection.style.display === 'none') {
+                vouchersSection.style.display = 'block';
+                toggleIcon.className = 'fas fa-chevron-up ms-2';
+            } else {
+                vouchersSection.style.display = 'none';
+                toggleIcon.className = 'fas fa-chevron-down ms-2';
+            }
+        }
+
+        function selectVoucher(code, value) {
+            // Remove existing voucher first
+            removeVoucher();
+
+            appliedVoucherData = { code, value };
+
+            // Update applied voucher display
+            const appliedVoucherDiv = document.getElementById('appliedVoucher');
+            const appliedVoucherText = document.getElementById('appliedVoucherText');
+
+            let description = '';
+            if (code === 'DISKON20') {
+                description = `Kode: ${code} - Diskon 20% diterapkan`;
+            } else if (code === 'GRATISONKIR') {
+                description = `Kode: ${code} - Gratis ongkir diterapkan`;
+            } else if (code === 'NEWUSER50') {
+                description = `Kode: ${code} - Diskon Rp 50.000 diterapkan`;
+            }
+
+            appliedVoucherText.textContent = description;
+            appliedVoucherDiv.style.display = 'block';
+
+            // Hide available vouchers section after selection
+            document.getElementById('availableVouchersSection').style.display = 'none';
+            document.getElementById('voucherToggleIcon').className = 'fas fa-chevron-down ms-2';
+
+            console.log(`Voucher applied: ${code} with value: ${value}`);
+        }
+
+        function removeVoucher() {
+            appliedVoucherData = null;
+
+            // Hide applied voucher display
+            document.getElementById('appliedVoucher').style.display = 'none';
+
+            console.log('Voucher removed');
+        }
+
+        // Initialize page functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Checkout page loaded');
+
+            // Set default shipping method (dropship)
+            selectShippingMethod('dropship');
+
+            // Set default courier (JNE)
+            selectCourier('jne');
+
+            // Set default payment method (bank transfer)
+            selectPaymentMethod('bank');
+        });
+
+        // Place order functionality
+        function placeOrder() {
+            // Basic form validation
+            const form = document.getElementById('checkout-form');
+            const selectedPayment = document.querySelector('input[name="paymentMethod"]:checked');
+
+            if (!selectedPayment) {
+                alert('Silakan pilih metode pembayaran');
+                return;
+            }
+
+            // Check if payment details are filled (for credit card)
+            if (selectedPayment.value === 'credit') {
+                const cardNumber = document.getElementById('cardNumber').value;
+                const expiryDate = document.getElementById('expiryDate').value;
+                const cvv = document.getElementById('cvv').value;
+                const cardName = document.getElementById('cardName').value;
+
+                if (!cardNumber || !expiryDate || !cvv || !cardName) {
+                    alert('Silakan lengkapi data kartu kredit');
+                    return;
+                }
+            }
+
+            // Check for selected bank/wallet options
+            if (selectedPayment.value === 'bank') {
+                const selectedBank = document.querySelector('input[name="bankOption"]:checked');
+                if (!selectedBank) {
+                    alert('Silakan pilih bank tujuan transfer');
+                    return;
+                }
+            } else if (selectedPayment.value === 'wallet') {
+                const selectedWallet = document.querySelector('input[name="walletOption"]:checked');
+                if (!selectedWallet) {
+                    alert('Silakan pilih dompet digital');
+                    return;
+                }
+            }
+
+            // Show success message
+            alert('Pesanan berhasil dibuat! Anda akan menerima email konfirmasi segera.');
+
+            // Redirect to success page
+            window.location.href = 'order-confirmation.html';
+        }
+    </script>
+    <script src="js/responsive.js"></script>
+    <script src="js/icon-fix.js"></script>
+</body>
+
+</html>

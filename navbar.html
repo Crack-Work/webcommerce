@@ -1,0 +1,72 @@
+<header class="main-header shadow-sm bg-white py-3">
+  <div class="container-fluid navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-light w-100 px-0">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 me-auto" href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo-img">
+      </a>
+
+      <!-- Mobile toggle -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Belanja</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="shop.html?brand=jenauli" data-brand="jenauli">Jenauli</a></li>
+              <li><a class="dropdown-item" href="shop.html?brand=hypure" data-brand="hypure">Hypure</a></li>
+              <li><a class="dropdown-item" href="shop.html?brand=honiq" data-brand="honiq">Honiq</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=jenauli">Jenauli</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=hypure">Hypure</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=honiq">Honiq</a></li>
+        </ul>
+      </div>
+
+      <!-- Right icons -->
+      <div class="d-none d-lg-flex align-items-center gap-4 ms-auto">
+        <!-- Logged in -->
+        <!-- Notifikasi dengan dropdown -->
+        <div class="dropdown d-user-logged notif-dropdown">
+          <a class="nav-icon position-relative dropdown-toggle" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-bell"></i>
+            <span class="badge bg-danger rounded-pill notif-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="notifDropdown" style="width: 350px;">
+            <div class="notif-header d-flex justify-content-between align-items-center p-3 border-bottom">
+              <h6 class="m-0 fw-bold">Notifikasi</h6>
+              <span class="badge bg-primary rounded-pill notif-count">3</span>
+            </div>
+            <div class="notif-list" style="max-height: 300px; overflow-y: auto;">
+              <!-- Isi notifikasi akan diinject dari JS -->
+            </div>
+            <div class="p-3 border-top text-center">
+              <a href="notification.html" class="btn btn-primary btn-sm w-100">Lihat Semua Notifikasi</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="profile.html" class="nav-icon d-user-logged"><i class="fas fa-user"></i></a>
+        <a href="wishlist.html" class="nav-icon d-user-logged"><i class="fas fa-heart"></i></a>
+        <a href="cart.html" class="nav-icon d-user-logged"><i class="fas fa-shopping-cart"></i></a>
+        <a href="logout.html" class="nav-icon d-user-logged"><i class="fas fa-sign-out-alt"></i></a>
+
+        <!-- Not logged in -->
+        <a href="login.html" class="btn btn-outline-primary btn-sm d-user-not-logged">Login</a>
+        <a href="register.html" class="btn btn-primary btn-sm d-user-not-logged">Register</a>
+
+        <!-- Language -->
+        <select class="form-select form-select-sm" style="width: 60px;">
+          <option>ID</option>
+          <option>EN</option>
+        </select>
+      </div>
+    </nav>
+  </div>
+</header>

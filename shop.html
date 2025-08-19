@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shop - Sareo E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <!--<link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive-fix.css" rel="stylesheet" />
+    <link href="css/tailwind-responsive.css" rel="stylesheet" />-->
+    <link href="css/shop.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    
+    <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Load navbar + show/hide user buttons -->
+  <script src="navbar.js"></script>
+
+    <!-- Brand Banner -->
+    <section class="brand-banner py-5 inline-style-74" id="brand-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="brand-content">
+                        <h1 class="mb-3 inline-style-75" id="brand-title">
+                            Brand Shop
+                        </h1>
+                        <p class="mb-4 inline-style-76" id="brand-subtitle">
+                            Discover premium beauty products from our trusted brand collection
+                        </p>
+                        <div class="brand-stats d-flex gap-4">
+                            <div class="stat-item">
+                                <div class="stat-number inline-style-77">50+</div>
+                                <div class="stat-label inline-style-78">Products</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number inline-style-79">4.8★</div>
+                                <div class="stat-label inline-style-80">Rating</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number inline-style-81">1000+</div>
+                                <div class="stat-label inline-style-82">Reviews</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="brand-logo-container" id="brand-logo-container">
+                        <img alt="Brand Logo" class="inline-style-83" id="brand-logo" src="" />
+                        <div class="brand-logo-fallback inline-style-84" id="brand-logo-fallback">
+                            <span class="inline-style-85" id="brand-initial">B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Content -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="sidebar">
+                    <!-- Categories Filter -->
+                    <div class="filter-section mb-4">
+                        <h5 class="filter-title">Categories</h5>
+                        <div class="filter-content">
+                            <div class="form-check">
+                                <input class="form-check-input" id="electronics" type="checkbox" value="electronics" />
+                                <label class="form-check-label" for="electronics">Electronics</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="clothing" type="checkbox" value="clothing" />
+                                <label class="form-check-label" for="clothing">Clothing</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="books" type="checkbox" value="books" />
+                                <label class="form-check-label" for="books">Books</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="home" type="checkbox" value="home" />
+                                <label class="form-check-label" for="home">Home &amp; Garden</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="sports" type="checkbox" value="sports" />
+                                <label class="form-check-label" for="sports">Sports</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Price Filter -->
+                    <div class="filter-section mb-4">
+                        <h5 class="filter-title">Price Range</h5>
+                        <div class="filter-content">
+                            <div class="form-check">
+                                <input class="form-check-input" id="price1" type="checkbox" value="0-25" />
+                                <label class="form-check-label" for="price1">$0 - $25</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="price2" type="checkbox" value="25-50" />
+                                <label class="form-check-label" for="price2">$25 - $50</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="price3" type="checkbox" value="50-100" />
+                                <label class="form-check-label" for="price3">$50 - $100</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="price4" type="checkbox" value="100+" />
+                                <label class="form-check-label" for="price4">$100+</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Rating Filter -->
+                    <div class="filter-section mb-4">
+                        <h5 class="filter-title">Rating</h5>
+                        <div class="filter-content">
+                            <div class="form-check">
+                                <input class="form-check-input" id="rating5" type="checkbox" value="5" />
+                                <label class="form-check-label" for="rating5">
+                                    <span class="stars">★★★★★</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="rating4" type="checkbox" value="4" />
+                                <label class="form-check-label" for="rating4">
+                                    <span class="stars">★★★★☆</span> &amp; up
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" id="rating3" type="checkbox" value="3" />
+                                <label class="form-check-label" for="rating3">
+                                    <span class="stars">★★★☆☆</span> &amp; up
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Clear Filters -->
+                    <button class="btn btn-outline-secondary w-100" onclick="clearShopFilters()">Clear Filters</button>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Sort Bar -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <p class="mb-0">Showing <span id="product-count">6</span> products</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <label class="me-2">Sort by:</label>
+                        <select class="form-select inline-style-86" id="sortSelect" onchange="sortShopProducts()">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Products Grid -->
+                <div class="row" id="products-grid">
+                    <!-- Product Card 1 - Hydrating Facial Cream -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-card h-100 inline-style-87">
+                            <div class="product-image inline-style-88">
+                                <img alt="Hydrating Facial Cream" class="inline-style-89"
+                                    src="images/products/hydrating-facial-cream.svg" />
+                                <div class="product-badge inline-style-90">
+                                    BEST SELLER
+                                </div>
+                                <button class="btn btn-primary wishlist-btn inline-style-91">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info p-3">
+                                <div class="product-category mb-2 inline-style-92">
+                                    Skincare
+                                </div>
+                                <h5 class="product-title mb-2 inline-style-93">
+                                    <a class="text-decoration-none text-dark" href="product.html">Hydrating Facial
+                                        Cream</a>
+                                </h5>
+                                <div class="product-rating mb-2">
+                                    <span class="stars inline-style-94">★★★★★</span>
+                                    <span class="inline-style-95">(124 reviews)</span>
+                                </div>
+                                <div class="product-price mb-3">
+                                    <span class="current-price inline-style-96">
+                                        Rp 285.000
+                                    </span>
+                                    <span class="original-price inline-style-97">
+                                        Rp 350.000
+                                    </span>
+                                </div>
+                                <button class="btn-cart w-100" onclick="addToCart(1)">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 - Vitamin C Serum -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-card h-100 inline-style-98">
+                            <div class="product-image inline-style-99">
+                                <img alt="Vitamin C Serum" class="inline-style-100"
+                                    src="images/products/vitamin-c-serum.svg" />
+                                <div class="product-badge inline-style-101">
+                                    NEW
+                                </div>
+                                <button class="btn btn-primary wishlist-btn inline-style-102">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info p-3">
+                                <div class="product-category mb-2 inline-style-103">
+                                    Skincare
+                                </div>
+                                <h5 class="product-title mb-2 inline-style-104">
+                                    <a class="text-decoration-none text-dark" href="product.html">Vitamin C Brightening
+                                        Serum</a>
+                                </h5>
+                                <div class="product-rating mb-2">
+                                    <span class="stars inline-style-105">★★★★☆</span>
+                                    <span class="inline-style-106">(89 reviews)</span>
+                                </div>
+                                <div class="product-price mb-3">
+                                    <span class="current-price inline-style-107">
+                                        Rp 195.000
+                                    </span>
+                                </div>
+                                <button class="btn-cart w-100" onclick="addToCart(2)">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 - Matte Lipstick -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-card h-100 inline-style-108">
+                            <div class="product-image inline-style-109">
+                                <img alt="Matte Lipstick" class="inline-style-110"
+                                    src="images/products/matte-lipstick.svg" />
+                                <button class="btn btn-primary wishlist-btn inline-style-111">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info p-3">
+                                <div class="product-category mb-2 inline-style-112">
+                                    Makeup
+                                </div>
+                                <h5 class="product-title mb-2 inline-style-113">
+                                    <a class="text-decoration-none text-dark" href="product.html?id=3">Long-lasting
+                                        Matte Lipstick</a>
+                                </h5>
+                                <div class="product-rating mb-2">
+                                    <span class="stars inline-style-114">★★★★★</span>
+                                    <span class="inline-style-115">(203 reviews)</span>
+                                </div>
+                                <div class="product-price mb-3">
+                                    <span class="current-price inline-style-116">
+                                        Rp 145.000
+                                    </span>
+                                    <span class="original-price inline-style-117">
+                                        Rp 165.000
+                                    </span>
+                                </div>
+                                <button class="btn-cart w-100" onclick="addToCart(3)">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 - Sunscreen SPF 50 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-card h-100 inline-style-118">
+                            <div class="product-image inline-style-119">
+                                <img alt="Sunscreen SPF 50" class="inline-style-120"
+                                    src="images/products/sunscreen-spf50.svg" />
+                                <div class="product-badge inline-style-121">
+                                    TRENDING
+                                </div>
+                                <button class="btn btn-primary wishlist-btn inline-style-122">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info p-3">
+                                <div class="product-category mb-2 inline-style-123">
+                                    Skincare
+                                </div>
+                                <h5 class="product-title mb-2 inline-style-124">
+                                    <a class="text-decoration-none text-dark" href="product.html?id=4">Daily Protection
+                                        Sunscreen SPF 50</a>
+                                </h5>
+                                <div class="product-rating mb-2">
+                                    <span class="stars inline-style-125">★★★★☆</span>
+                                    <span class="inline-style-126">(156 reviews)</span>
+                                </div>
+                                <div class="product-price mb-3">
+                                    <span class="current-price inline-style-127">
+                                        Rp 125.000
+                                    </span>
+                                </div>
+                                <button class="btn-cart w-100" onclick="addToCart(4)">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 - Eye Cream -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-card h-100 inline-style-128">
+                            <div class="product-image inline-style-129">
+                                <img alt="Anti-Aging Eye Cream" class="inline-style-130"
+                                    src="images/products/eye-cream.svg" />
+                                <button class="btn btn-primary wishlist-btn inline-style-131">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info p-3">
+                                <div class="product-category mb-2 inline-style-132">
+                                    Skincare
+                                </div>
+                                <h5 class="product-title mb-2 inline-style-133">
+                                    <a class="text-decoration-none text-dark" href="product.html?id=5">Anti-Aging Eye
+                                        Cream</a>
+                                </h5>
+                                <div class="product-rating mb-2">
+                                    <span class="stars inline-style-134">★★★★★</span>
+                                    <span class="inline-style-135">(78 reviews)</span>
+                                </div>
+                                <div class="product-price mb-3">
+                                    <span class="current-price inline-style-136">
+                                        Rp 320.000
+                                    </span>
+                                    <span class="original-price inline-style-137">
+                                        Rp 380.000
+                                    </span>
+                                </div>
+                                <button class="btn-cart w-100" onclick="addToCart(5)">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 - Foundation -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-card h-100 inline-style-138">
+                            <div class="product-image inline-style-139">
+                                <img alt="Liquid Foundation" class="inline-style-140"
+                                    src="images/products/liquid-foundation.svg" />
+                                <div class="product-badge inline-style-141">
+                                    SALE
+                                </div>
+                                <button class="btn btn-primary wishlist-btn inline-style-142">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="product-info p-3">
+                                <div class="product-category mb-2 inline-style-143">
+                                    Makeup
+                                </div>
+                                <h5 class="product-title mb-2 inline-style-144">
+                                    <a class="text-decoration-none text-dark" href="product.html?id=6">Full Coverage
+                                        Liquid Foundation</a>
+                                </h5>
+                                <div class="product-rating mb-2">
+                                    <span class="stars inline-style-145">★★★★☆</span>
+                                    <span class="inline-style-146">(167 reviews)</span>
+                                </div>
+                                <div class="product-price mb-3">
+                                    <span class="current-price inline-style-147">
+                                        Rp 215.000
+                                    </span>
+                                    <span class="original-price inline-style-148">
+                                        Rp 285.000
+                                    </span>
+                                </div>
+                                <button class="btn-cart w-100" onclick="addToCart(6)">
+                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <nav aria-label="Products pagination" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        
+                            <a class="page-link" href="#" tabindex="-1">next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+   <div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- No authentication needed - direct static navigation -->
+    <!-- Removed main.js to prevent interference with static product cards -->
+    <script>
+        // Product card hover effects and brand handling
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle brand parameter and banner
+            const urlParams = new URLSearchParams(window.location.search);
+            const brand = urlParams.get('brand');
+
+            // Brand configuration
+            const brandConfig = {
+                jenauli: {
+                    title: 'Jenauli Shop',
+                    subtitle: 'Temukan koleksi produk kecantikan premium Jenauli yang diformulasikan khusus untuk kulit Indonesia. Dari skincare hingga makeup, setiap produk Jenauli menghadirkan keindahan alami dengan teknologi terdepan.',
+                    breadcrumb: 'Jenauli',
+                    initial: 'J',
+                    stats: { products: '25+', rating: '4.9★', reviews: '850+' },
+                    gradient: 'linear-gradient(135deg, #FF6B9D 0%, #FF8E8E 100%)'
+                },
+                hypure: {
+                    title: 'Hypure Shop',
+                    subtitle: 'Eksplorasi rangkaian Hypure yang mengutamakan kemurnian dan kealamian. Produk skincare dan body care Hypure hadir dengan formula hipoalergenik yang aman untuk semua jenis kulit.',
+                    breadcrumb: 'Hypure',
+                    initial: 'H',
+                    stats: { products: '30+', rating: '4.8★', reviews: '1200+' },
+                    gradient: 'linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%)'
+                },
+                honiq: {
+                    title: 'Honiq Shop',
+                    subtitle: 'Rasakan pengalaman perawatan holistik dengan produk Honiq. Menggabungkan bahan-bahan alami terbaik dengan inovasi modern untuk hasil yang optimal dan terpercaya.',
+                    breadcrumb: 'Honiq',
+                    initial: 'H',
+                    stats: { products: '35+', rating: '4.7★', reviews: '950+' },
+                    gradient: 'linear-gradient(135deg, #F7971E 0%, #FFD200 100%)'
+                }
+            };
+
+            // Update page content based on brand
+            if (brand && brandConfig[brand]) {
+                const config = brandConfig[brand];
+
+                // Show brand banner
+                const brandBanner = document.getElementById('brand-banner');
+                brandBanner.style.display = 'block';
+
+                // Update banner content
+                document.getElementById('brand-title').textContent = config.title;
+                document.getElementById('brand-subtitle').textContent = config.subtitle;
+                document.getElementById('breadcrumb-brand').textContent = config.breadcrumb;
+                document.getElementById('brand-initial').textContent = config.initial;
+
+                // Update page title
+                document.title = config.title + ' - WooShop';
+
+                // Update brand logo background
+                const brandLogoFallback = document.getElementById('brand-logo-fallback');
+                brandLogoFallback.style.background = config.gradient;
+
+                // Update stats
+                const statNumbers = document.querySelectorAll('.stat-number');
+                statNumbers[0].textContent = config.stats.products;
+                statNumbers[1].textContent = config.stats.rating;
+                statNumbers[2].textContent = config.stats.reviews;
+
+                // Highlight active brand in navigation dropdown
+                const dropdownItems = document.querySelectorAll('.dropdown-item');
+                dropdownItems.forEach(item => {
+                    const href = item.getAttribute('href');
+                    if (href && href.includes(`brand=${brand}`)) {
+                        item.style.color = '#3698D4';
+                        item.style.fontWeight = '600';
+                    }
+                });
+            }
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.15)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                });
+            });
+
+            // Wishlist toggle functionality
+            const wishlistBtns = document.querySelectorAll('.wishlist-btn');
+            wishlistBtns.forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const icon = this.querySelector('i');
+                    if (this.style.color === 'rgb(255, 77, 77)') {
+                        this.style.color = '#9CA3AF';
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                    } else {
+                        this.style.color = '#FF4D4D';
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                    }
+                });
+            });
+
+            // Load custom logo if exists
+            const customLogo = localStorage.getItem('customLogo');
+            const headerLogo = document.getElementById('header-logo');
+
+            if (customLogo && headerLogo) {
+                headerLogo.src = customLogo;
+                headerLogo.style.display = 'inline';
+                headerLogo.nextElementSibling.style.display = 'none';
+            }
+        });
+
+        // Add to cart function
+        function addToCart(productId) {
+            // Get existing cart or create new one
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if product already exists in cart
+            const existingItem = cart.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                // Add new item to cart
+                cart.push({
+                    id: productId,
+                    quantity: 1,
+                    dateAdded: new Date().toISOString()
+                });
+            }
+
+            // Save cart to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show success message
+            const btn = event.target.closest('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check me-2"></i>Added!';
+            btn.style.background = '#4DD865';
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '#3698D4';
+            }, 2000);
+
+            // Update cart count if element exists
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            // Update cart count in header if element exists
+            const cartCountElement = document.querySelector('.cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = totalItems;
+            }
+        }
+
+        // Shop page specific functions
+        function clearShopFilters() {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            // Reset product display - show all products
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.parentElement.style.display = 'block';
+            });
+        }
+
+        function sortShopProducts() {
+            const sortSelect = document.getElementById('sortSelect');
+            const sortValue = sortSelect.value;
+            const productsGrid = document.getElementById('products-grid');
+            const productCards = Array.from(productsGrid.children);
+
+            // Simple sorting based on price (you can enhance this)
+            productCards.sort((a, b) => {
+                const priceA = parseFloat(a.querySelector('.current-price').textContent.replace(/[^0-9]/g, ''));
+                const priceB = parseFloat(b.querySelector('.current-price').textContent.replace(/[^0-9]/g, ''));
+
+                switch (sortValue) {
+                    case 'price-low':
+                        return priceA - priceB;
+                    case 'price-high':
+                        return priceB - priceA;
+                    default:
+                        return 0;
+                }
+            });
+
+            // Re-append sorted cards
+            productCards.forEach(card => productsGrid.appendChild(card));
+        }
+
+        // No additional JavaScript needed - Bootstrap handles the collapse functionality
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/notification.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/icon-fix.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Product Details - Sareo E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link href="css/rstyle.css" rel="stylesheet" />
+    <link href="css/rresponsive-fix.css" rel="stylesheet" />
+    <link href="css/rtailwind-responsive.css" rel="stylesheet" />
+    <link href="css/product-detail.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Load navbar + show/hide user buttons -->
+  <script src="navbar.js"></script>
+
+    <!-- Product Details -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Product Image Gallery -->
+                <div class="product-gallery">
+                    <!-- Main Product Image -->
+                    <div class="main-image mb-3">
+                        <img alt="Glow Radiance Serum" class="c33" id="main-product-image"
+                            onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmZkZGUxIDAlLCAjZmVjNGM0IDEwMCUpIi8+CjxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMTAwIiBmaWxsPSIjRkZCMkIyIiBvcGFjaXR5PSIwLjciLz4KPHN2ZyB4PSIyMDAiIHk9IjIwMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI0ZGOERBRCI+CjxwYXRoIGQ9Ik0xMiAxQzYuNDg1IDEgMiA1LjQ4NSAyIDExVjEzQzIgMTguNTE1IDYuNDg1IDIzIDEyIDIzQzE3LjUxNSAyMyAyMiAxOC41MTUgMjIgMTNWMTFDMjIgNS40ODUgMTcuNTE1IDEgMTIgMVpNMTIgMjFDNy41ODkgMjEgNCA3LjU4OSA0IDEzVjExQzQgNi41ODkgNy41ODkgMyAxMiAzQzE2LjQxMSAzIDIwIDYuNTg5IDIwIDExVjEzQzIwIDE3LjQxMSAxNi40MTEgMjEgMTIgMjFaIi8+CjxwYXRoIGQ9Ik05IDlIMTVWMTFIOVY5WiIvPgo8cGF0aCBkPSJNOSAxM0gxNVYxNUg5VjEzWiIvPgo8L3N2Zz4KPC9zdmc+'"
+                            src="images/products/glow-radiance-serum-main.jpg" />
+                    </div>
+                    <!-- Thumbnail Images -->
+                    <div class="thumbnail-images d-flex gap-2">
+                        <img alt="Glow Radiance Serum - View 1" class="c34" onclick="changeMainImage(this.src)"
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjRkZFQ0UwIDAlLCAjRkVCMkI0IDEwMCUpIiByeD0iOCIvPgo8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIxNiIgZmlsbD0iI0ZGQjJCMiIgb3BhY2l0eT0iMC43Ii8+Cjwvc3ZnPg==" />
+                        <img alt="Glow Radiance Serum - View 2" class="c35" onclick="changeMainImage(this.src)"
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjRjNFQ0YzIDAlLCAjRTZEREU2IDEwMCUpIiByeD0iOCIvPgo8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIxNiIgZmlsbD0iI0Q0QjJENCI+PC9jaXJjbGU+Cjwvc3ZnPg==" />
+                        <img alt="Glow Radiance Serum - View 3" class="c35" onclick="changeMainImage(this.src)"
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjRkZGMEUwIDAlLCAjRkZEREMwIDEwMCUpIiByeD0iOCIvPgo8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIxNCIgZmlsbD0iI0ZGQzA5MCI+PC9jaXJjbGU+Cjwvc3ZnPg==" />
+                        <img alt="Glow Radiance Serum - View 4" class="c35" onclick="changeMainImage(this.src)"
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjRjBGNUZGIDAlLCAjRDBFNEZGIDEwMCUpIiByeD0iOCIvPgo8Y2lyY2xlIGN4PSI0MCIgY3k9IjMwIiByPSI4IiBmaWxsPSIjOTBCREZGIj48L2NpcmNsZT4KPGNpcmNsZSBjeD0iNDAiIGN5PSI1MCIgcj0iOCIgZmlsbD0iIzYwQTVGQSI+PC9jaXJjbGU+Cjwvc3ZnPg==" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Product Information -->
+                <div class="product-info">
+                    <!-- Product Title -->
+                    <h1 class="c36">
+                        Glow Radiance Serum
+                    </h1>
+                    <!-- Rating -->
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rating">
+                            <span class="c37">★★★★★</span>
+                            <span class="c37">4.8</span>
+                        </div>
+                        <span class="c38">(128 Ulasan)</span>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-section mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="c39">
+                                Rp 389.000
+                            </span>
+                            <span class="c40">
+                                Rp 450.000
+                            </span>
+                            <span class="c41">
+                                Hemat 14%
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Product Description -->
+                    <div class="product-description mb-4">
+                        <p class="c42">
+                            Serum inovatif dengan kandungan Vitamin C, Niacinamide, dan Hyaluronic Acid yang membantu
+                            mencerahkan, meratakan warna kulit, dan memberikan kelembapan intensif. Formulasi ringan
+                            non-comedogenic yang cocok untuk semua jenis kulit.
+                        </p>
+                    </div>
+                    <!-- Variant Selection -->
+                    <div class="variant-selection mb-4">
+                        <div class="mb-3">
+                            <label class="c43">Pilih Varian</label>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="variant-btn active c44" data-variant="rose">Rose</button>
+                                <button class="variant-btn c45" data-variant="peach">Peach</button>
+                                <button class="variant-btn c45" data-variant="mauve">Mauve</button>
+                                <button class="variant-btn c45" data-variant="berry">Berry</button>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="c43">Pilih Ukuran</label>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="size-btn active c46" data-price="249000" data-size="30ml">
+                                    <div>30ml</div>
+                                    <div class="c47">Rp 249.000</div>
+                                </button>
+                                <button class="size-btn c48" data-price="399000" data-size="50ml">
+                                    <div>50ml</div>
+                                    <div class="c47">Rp 399.000</div>
+                                </button>
+                                <button class="size-btn c48" data-price="699000" data-size="100ml">
+                                    <div>100ml</div>
+                                    <div class="c47">Rp 699.000</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quantity -->
+                    <div class="quantity-section mb-4">
+                        <label class="c43">Jumlah</label>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="quantity-control d-flex align-items-center c49">
+                                <button class="c50" onclick="decreaseQuantity()" type="button">-</button>
+                                <input class="c51" id="quantity" max="24" min="1" type="number" value="1" />
+                                <button class="c50" onclick="increaseQuantity()" type="button">+</button>
+                            </div>
+                            <span class="c52">Tersisa 24 stok</span>
+                        </div>
+                    </div>
+                    <!-- Action Buttons -->
+                    <div class="action-buttons mb-4">
+                        <div class="d-flex gap-2 mb-3">
+                            <button class="btn flex-fill c53">
+                                Tambah ke Keranjang
+                            </button>
+                            <button class="btn flex-fill c54">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn flex-fill c55">
+                                <i class="fas fa-heart me-2"></i>Wishlist
+                            </button>
+                            <button class="btn flex-fill c55">
+                                <i class="fas fa-share me-2"></i>Bagikan
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Product Benefits -->
+                    <div class="product-benefits mb-4 c56">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-shipping-fast c57"></i>
+                            <span class="c58">Pengiriman gratis untuk pembelian di atas Rp 300.000</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-shield-alt c57"></i>
+                            <span class="c58">Garansi keaslian produk 100%</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-undo c57"></i>
+                            <span class="c58">30 hari pengembalian produk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Details Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <!-- Tab Navigation -->
+                <ul class="nav nav-tabs mb-4 c59">
+                    <li class="nav-item">
+                        <button class="nav-link active c60" id="description-tab"
+                            onclick="showTab('description')">Deskripsi</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link c61" id="ingredients-tab"
+                            onclick="showTab('ingredients')">Ingredients</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link c61" id="usage-tab" onclick="showTab('usage')">Cara Penggunaan</button>
+                    </li>
+                </ul>
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Description Tab -->
+                    <div class="tab-pane active" id="description-content">
+                        <div class="c62">
+                            <h3 class="c63">
+                                Tentang Glow Radiance Serum
+                            </h3>
+                            <p class="c42">
+                                Glow Radiance Serum adalah formula revolusioner yang dirancang untuk memberikan pancaran
+                                alami pada kulit Anda. Dengan kandungan Vitamin C konsentrasi tinggi, serum ini efektif
+                                mencerahkan kulit kusam dan mengurangi hiperpigmentasi.
+                            </p>
+                            <p class="c42">
+                                Diperkaya dengan Niacinamide 5% yang membantu menyamarkan noda hitam dan memperkuat
+                                barrier kulit. Hyaluronic Acid dalam serum ini memberikan hidrasi intensif hingga
+                                lapisan terdalam kulit, menjadikan kulit terasa kenyal dan lembap sepanjang hari.
+                            </p>
+                            <p class="c64">
+                                Formula ringan dan cepat meresap, tidak lengket dan tidak menyumbat pori-pori. Cocok
+                                untuk semua jenis kulit, termasuk kulit sensitif. Bebas dari paraben, sulfat, dan
+                                pewangi buatan.
+                            </p>
+                            <!-- Benefits Grid -->
+                            <div class="row">
+                                <div class="col-md-4 text-center mb-4">
+                                    <div class="c65">
+                                        <i class="fas fa-sun c66"></i>
+                                    </div>
+                                    <h5 class="c67">Mencerahkan</h5>
+                                    <p class="c68">Vitamin C membantu mencerahkan kulit kusam dan meratakan warna kulit
+                                    </p>
+                                </div>
+                                <div class="col-md-4 text-center mb-4">
+                                    <div class="c69">
+                                        <i class="fas fa-tint c70"></i>
+                                    </div>
+                                    <h5 class="c67">Melembapkan</h5>
+                                    <p class="c68">Hyaluronic Acid memberikan hidrasi intensif hingga 24 jam</p>
+                                </div>
+                                <div class="col-md-4 text-center mb-4">
+                                    <div class="c71">
+                                        <i class="fas fa-leaf c72"></i>
+                                    </div>
+                                    <h5 class="c67">Anti-Aging</h5>
+                                    <p class="c68">Peptida membantu meningkatkan elastisitas dan mengurangi garis halus
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ingredients Tab -->
+                    <div class="tab-pane c73" id="ingredients-content">
+                        <div class="c62">
+                            <h3 class="c63">
+                                Ingredients
+                            </h3>
+                            <div class="ingredient-list">
+                                <p class="c74">
+                                    <strong>Vitamin C (15%):</strong> Antioksidan kuat yang membantu mencerahkan kulit
+                                    dan melindungi dari radikal bebas.
+                                </p>
+                                <p class="c74">
+                                    <strong>Niacinamide (5%):</strong> Membantu mengontrol produksi minyak, menyamarkan
+                                    pori-pori, dan memperkuat skin barrier.
+                                </p>
+                                <p class="c74">
+                                    <strong>Hyaluronic Acid:</strong> Molekul yang dapat menahan hingga 1000x beratnya
+                                    dalam air untuk hidrasi optimal.
+                                </p>
+                                <p class="c74">
+                                    <strong>Peptides Complex:</strong> Membantu meningkatkan produksi kolagen dan
+                                    elastisitas kulit.
+                                </p>
+                                <p class="c74">
+                                    <strong>Alpha Arbutin:</strong> Bahan aktif yang membantu mengurangi hiperpigmentasi
+                                    dengan aman.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Usage Tab -->
+                    <div class="tab-pane c73" id="usage-content">
+                        <div class="c62">
+                            <h3 class="c63">
+                                Cara Penggunaan
+                            </h3>
+                            <div class="usage-steps">
+                                <div class="d-flex mb-3">
+                                    <div class="c75">1</div>
+                                    <p class="c76">Bersihkan wajah dengan gentle cleanser</p>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="c75">2</div>
+                                    <p class="c76">Aplikasikan 2-3 tetes serum pada wajah dan leher</p>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="c75">3</div>
+                                    <p class="c76">Pijat lembut dengan gerakan memutar hingga meresap</p>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="c75">4</div>
+                                    <p class="c76">Lanjutkan dengan moisturizer dan sunscreen (pagi hari)</p>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="c75">5</div>
+                                    <p class="c76">Gunakan 2x sehari (pagi dan malam) untuk hasil optimal</p>
+                                </div>
+                            </div>
+                            <div class="c77">
+                                <p class="c78">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Untuk kulit sensitif, lakukan patch test terlebih dahulu. Hindari area mata. Gunakan
+                                    sunscreen saat pemakaian pada siang hari.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Reviews Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="c62">
+                    <!-- Rating Summary -->
+                    <div class="mb-4">
+                        <h3 class="c79">
+                            Ulasan Pelanggan
+                        </h3>
+                        <div class="d-flex align-items-center">
+                            <span class="c80">★★★★★</span>
+                            <span class="c81">4.8</span>
+                            <span class="c82">Berdasarkan 127 ulasan</span>
+                        </div>
+                    </div>
+                    <!-- Individual Reviews -->
+                    <div class="reviews-list">
+                        <!-- Review 1 -->
+                        <div class="c83">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="c84">
+                                    <i class="fas fa-user c82"></i>
+                                </div>
+                                <div>
+                                    <h6 class="c85">Anisa Wijaya</h6>
+                                    <p class="c68">15 Juni 2025</p>
+                                </div>
+                                <div class="ms-auto">
+                                    <span class="c86">★★★★★</span>
+                                </div>
+                            </div>
+                            <p class="c87">
+                                Produk ini sangat bagus! Kulit saya terasa lebih lembab dan cerah setelah pemakaian
+                                rutin selama 2 minggu. Teksturnya ringan dan mudah meresap. Sangat merekomendasikan!
+                            </p>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="c83">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="c84">
+                                    <i class="fas fa-user c82"></i>
+                                </div>
+                                <div>
+                                    <h6 class="c85">Dian Sastro</h6>
+                                    <p class="c68">2 Juni 2025</p>
+                                </div>
+                                <div class="ms-auto">
+                                    <span class="c86">★★★★☆</span>
+                                </div>
+                            </div>
+                            <p class="c87">
+                                Saya suka wanginya yang lembut dan tidak menyengat. Teksturnya juga pas, tidak terlalu
+                                kental. Hanya saja harganya agak mahal untuk ukuran 50ml.
+                            </p>
+                        </div>
+                        <!-- Review 3 -->
+                        <div class="c83">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="c84">
+                                    <i class="fas fa-user c82"></i>
+                                </div>
+                                <div>
+                                    <h6 class="c85">Putri Marino</h6>
+                                    <p class="c68">28 Mei 2025</p>
+                                </div>
+                                <div class="ms-auto">
+                                    <span class="c86">★★★★★</span>
+                                </div>
+                            </div>
+                            <p class="c87">
+                                Sudah menggunakan produk ini selama sebulan dan hasilnya luar biasa! Kulit wajah saya
+                                yang biasanya berminyak jadi lebih terkontrol dan noda hitam mulai memudar.
+                                Packaging-nya juga sangat elegan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="c88">
+                            Lihat Semua Ulasan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Related Products -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="c89">
+                    Produk Serupa yang Mungkin Anda Suka
+                </h3>
+                <div class="row">
+                    <!-- Related Product 1 -->
+                    <div class="col-lg-2-4 col-md-6 col-sm-6 mb-4">
+                        <div class="product-card h-100 c90">
+                            <div class="product-image c91">
+                                <img alt="Hydra Boost Moisturizer" class="c92"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjYThlZGVhIDAlLCAjZmVkNmUzIDEwMCUpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiNGRkIyQjIiIG9wYWNpdHk9IjAuNyIvPgo8L3N2Zz4=" />
+                            </div>
+                            <div class="product-info p-3">
+                                <h6 class="c93">Hydra Boost Moisturizer</h6>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="c94">★★★★☆</span>
+                                    <span class="c95">(98)</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <span class="c96">Rp 275.000</span>
+                                        <div class="c97">Rp 320.000</div>
+                                    </div>
+                                    <button class="c98">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Related Product 2 -->
+                    <div class="col-lg-2-4 col-md-6 col-sm-6 mb-4">
+                        <div class="product-card h-100 c90">
+                            <div class="product-image c99">
+                                <img alt="Brightening Toner" class="c92"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmZlY2QyIDAlLCAjZmNiNjlmIDEwMCUpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIyNSIgZmlsbD0iI0ZGQzA5MCIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMjAiIHI9IjMwIiBmaWxsPSIjRkZBMDcwIiBvcGFjaXR5PSIwLjgiLz4KPC9zdmc+" />
+                            </div>
+                            <div class="product-info p-3">
+                                <h6 class="c93">Brightening Toner</h6>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="c94">★★★★★</span>
+                                    <span class="c95">(156)</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <span class="c96">Rp 185.000</span>
+                                        <div class="c97">Rp 235.000</div>
+                                    </div>
+                                    <button class="c98">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more related products in a similar pattern -->
+                    <!-- I'll add 3 more products to complete the 5-product row -->
+                    <!-- Related Product 3 -->
+                    <div class="col-lg-2-4 col-md-6 col-sm-6 mb-4">
+                        <div class="product-card h-100 c90">
+                            <div class="product-image c100">
+                                <img alt="Overnight Repair Mask" class="c92"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmY5YTllIDAlLCAjZmVjZmVmIDEwMCUpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMzUiIGZpbGw9IiNGRkI2RDkiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4=" />
+                            </div>
+                            <div class="product-info p-3">
+                                <h6 class="c93">Overnight Repair Mask</h6>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="c94">★★★★☆</span>
+                                    <span class="c95">(87)</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <span class="c96">Rp 320.000</span>
+                                        <div class="c97">Rp 380.000</div>
+                                    </div>
+                                    <button class="c98">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Related Product 4 -->
+                    <div class="col-lg-2-4 col-md-6 col-sm-6 mb-4">
+                        <div class="product-card h-100 c90">
+                            <div class="product-image c101">
+                                <img alt="Rejuvenating Facial Oil" class="c92"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmZlYWE3IDAlLCAjZmFiMWEwIDEwMCUpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjkwIiByPSIyMCIgZmlsbD0iI0ZGOEM1QSIvPgo8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMTAiIHI9IjI1IiBmaWxsPSIjRkZBMDcwIiBvcGFjaXR5PSIwLjciLz4KPC9zdmc+" />
+                            </div>
+                            <div class="product-info p-3">
+                                <h6 class="c93">Rejuvenating Facial Oil</h6>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="c94">★★★★☆</span>
+                                    <span class="c95">(64)</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <span class="c96">Rp 295.000</span>
+                                        <div class="c97">Rp 350.000</div>
+                                    </div>
+                                    <button class="c98">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Related Product 5 -->
+                    <div class="col-lg-2-4 col-md-6 col-sm-6 mb-4">
+                        <div class="product-card h-100 c90">
+                            <div class="product-image c102">
+                                <img alt="Advanced Eye Cream" class="c92"
+                                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSJsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjNzRiOWZmIDAlLCAjMDk4NGUzIDEwMCUpIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMzAiIGZpbGw9IiM2MEE1RkEiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4=" />
+                            </div>
+                            <div class="product-info p-3">
+                                <h6 class="c93">Advanced Eye Cream</h6>
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="c94">★★★★★</span>
+                                    <span class="c95">(112)</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <span class="c96">Rp 280.000</span>
+                                        <div class="c97">Rp 320.000</div>
+                                    </div>
+                                    <button class="c98">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Product functionality
+        function showTab(tabName) {
+            // Hide all tab contents (excluding reviews which is now a separate section)
+            const tabContents = ['description-content', 'ingredients-content', 'usage-content'];
+            tabContents.forEach(contentId => {
+                const element = document.getElementById(contentId);
+                if (element) {
+                    element.style.display = 'none';
+                    element.classList.remove('active');
+                }
+            });
+
+            // Remove active class from all tabs
+            document.querySelectorAll('.nav-link').forEach(tab => {
+                tab.style.color = '#6B7280';
+                tab.style.borderBottom = '2px solid transparent';
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            const targetContent = document.getElementById(tabName + '-content');
+            if (targetContent) {
+                targetContent.style.display = 'block';
+                targetContent.classList.add('active');
+            }
+
+            // Add active class to selected tab
+            const activeTab = document.getElementById(tabName + '-tab');
+            if (activeTab) {
+                activeTab.style.color = '#3698D4';
+                activeTab.style.borderBottom = '2px solid #3698D4';
+                activeTab.classList.add('active');
+            }
+        }
+
+        // Variant selection
+        document.querySelectorAll('.variant-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active class from all variant buttons
+                document.querySelectorAll('.variant-btn').forEach(b => {
+                    b.style.background = 'white';
+                    b.style.color = '#374151';
+                    b.style.border = '2px solid #E5E7EB';
+                    b.classList.remove('active');
+                });
+
+                // Add active class to clicked button
+                this.style.background = '#3698D4';
+                this.style.color = 'white';
+                this.style.border = '2px solid #3698D4';
+                this.classList.add('active');
+            });
+        });
+
+        // Size selection
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Remove active class from all size buttons
+                document.querySelectorAll('.size-btn').forEach(b => {
+                    b.style.background = 'white';
+                    b.style.color = '#374151';
+                    b.style.border = '2px solid #E5E7EB';
+                    b.classList.remove('active');
+                });
+
+                // Add active class to clicked button
+                this.style.background = '#3698D4';
+                this.style.color = 'white';
+                this.style.border = '2px solid #3698D4';
+                this.classList.add('active');
+
+                // Update price based on selected size
+                const price = this.getAttribute('data-price');
+                const formattedPrice = 'Rp ' + parseInt(price).toLocaleString('id-ID');
+                document.querySelector('.price-section .current-price').textContent = formattedPrice;
+            });
+        });
+
+        // Quantity controls
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            const max = parseInt(input.getAttribute('max'));
+            const current = parseInt(input.value);
+            if (current < max) {
+                input.value = current + 1;
+            }
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            const min = parseInt(input.getAttribute('min'));
+            const current = parseInt(input.value);
+            if (current > min) {
+                input.value = current - 1;
+            }
+        }
+
+        // Image gallery
+        function changeMainImage(src) {
+            document.getElementById('main-product-image').src = src;
+
+            // Update thumbnail borders
+            document.querySelectorAll('.thumbnail-images img').forEach(img => {
+                img.style.border = '1px solid #E5E7EB';
+            });
+
+            // Add active border to clicked thumbnail
+            event.target.style.border = '2px solid #3698D4';
+        }
+
+        // CSS for 5-column grid on related products
+        const style = document.createElement('style');
+        style.textContent = `
+            .col-lg-2-4 {
+                position: relative;
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            
+            @media (min-width: 992px) {
+                .col-lg-2-4 {
+                    flex: 0 0 20%;
+                    max-width: 20%;
+                }
+            }
+            
+            .product-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    <script src="js/responsive.js"></script>
+    <script src="js/icon-fix.js"></script>
+</body>
+
+</html>

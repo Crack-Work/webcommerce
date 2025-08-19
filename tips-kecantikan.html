@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tips Kecantikan - Sareo E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/responsives-fix.css" rel="stylesheet" />
+    <link href="css/tailwinds-responsive.css" rel="stylesheet" />
+    <link href="css/article.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+    <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Load navbar + show/hide user buttons -->
+  <script src="navbar.js"></script>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 inline-style-69">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="inline-style-70">
+                        Tips Kecantikan
+                    </h1>
+                    <p class="inline-style-71">
+                        Temukan rahasia kecantikan dan tips perawatan kulit terbaik dari para ahli untuk tampil lebih
+                        percaya diri setiap hari
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Articles -->
+    <section class="blog-articles py-5">
+        <div class="container">
+            <!-- Category Filter -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="category-filter d-flex justify-content-center flex-wrap gap-3">
+                        <button class="btn filter-btn active inline-style-72" data-category="all">
+                            Semua
+                        </button>
+                        <button class="btn filter-btn inline-style-73" data-category="skincare">
+                            Perawatan Kulit
+                        </button>
+                        <button class="btn filter-btn inline-style-74" data-category="makeup">
+                            Makeup
+                        </button>
+                        <button class="btn filter-btn inline-style-75" data-category="hair">
+                            Perawatan Rambut
+                        </button>
+                        <button class="btn filter-btn inline-style-76" data-category="lifestyle">
+                            Gaya Hidup
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Articles Grid -->
+            <div class="row" id="articles-container">
+                <!-- Article 1 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="skincare">
+                    <article class="blog-card h-100 inline-style-77">
+                        <div class="blog-image inline-style-78">
+                            <img alt="Rutinas Skincare Harian" class="inline-style-79"
+                                src="https://via.placeholder.com/400x240/ffecd2/333333?text=Rutinas+Skincare+Harian" />
+                            <div class="blog-category inline-style-80">
+                                Perawatan Kulit
+                            </div>
+                        </div>
+                        <div class="blog-content inline-style-81">
+                            <div class="blog-meta mb-3 inline-style-82">
+                                <span><i class="fas fa-calendar-alt me-2"></i>28 Juli 2025</span>
+                                <span><i class="fas fa-clock me-2"></i>5 min read</span>
+                            </div>
+                            <h3 class="blog-title mb-3 inline-style-83">
+                                <a class="text-decoration-none text-dark" href="#">Rutinas Skincare Harian untuk Kulit
+                                    Sehat dan Glowing</a>
+                            </h3>
+                            <p class="blog-excerpt mb-3 inline-style-84">
+                                Panduan lengkap untuk membangun rutinas perawatan kulit yang efektif, mulai dari
+                                pembersihan hingga pelembap yang tepat untuk jenis kulit Anda.
+                            </p>
+                            <a class="read-more inline-style-85" href="#">
+                                Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 2 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="makeup">
+                    <article class="blog-card h-100 inline-style-86">
+                        <div class="blog-image inline-style-87">
+                            <img alt="Makeup Natural Harian" class="inline-style-88"
+                                src="https://via.placeholder.com/400x240/ffeaa7/333333?text=Makeup+Natural+Harian" />
+                            <div class="blog-category inline-style-89">
+                                Makeup
+                            </div>
+                        </div>
+                        <div class="blog-content inline-style-90">
+                            <div class="blog-meta mb-3 inline-style-91">
+                                <span><i class="fas fa-calendar-alt me-2"></i>26 Juli 2025</span>
+                                <span><i class="fas fa-clock me-2"></i>7 min read</span>
+                            </div>
+                            <h3 class="blog-title mb-3 inline-style-92">
+                                <a class="text-decoration-none text-dark" href="#">Tutorial Makeup Natural untuk
+                                    Sehari-hari</a>
+                            </h3>
+                            <p class="blog-excerpt mb-3 inline-style-93">
+                                Pelajari teknik makeup natural yang mudah dan cepat untuk tampilan fresh dan percaya
+                                diri sepanjang hari, cocok untuk pemula.
+                            </p>
+                            <a class="read-more inline-style-94" href="#">
+                                Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 3 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="hair">
+                    <article class="blog-card h-100 inline-style-95">
+                        <div class="blog-image inline-style-96">
+                            <img alt="Perawatan Rambut Rusak" class="inline-style-97"
+                                src="https://via.placeholder.com/400x240/74b9ff/333333?text=Perawatan+Rambut+Rusak" />
+                            <div class="blog-category inline-style-98">
+                                Perawatan Rambut
+                            </div>
+                        </div>
+                        <div class="blog-content inline-style-99">
+                            <div class="blog-meta mb-3 inline-style-100">
+                                <span><i class="fas fa-calendar-alt me-2"></i>24 Juli 2025</span>
+                                <span><i class="fas fa-clock me-2"></i>6 min read</span>
+                            </div>
+                            <h3 class="blog-title mb-3 inline-style-101">
+                                <a class="text-decoration-none text-dark" href="#">Cara Mengatasi Rambut Rusak dan
+                                    Kering Secara Alami</a>
+                            </h3>
+                            <p class="blog-excerpt mb-3 inline-style-102">
+                                Tips dan trik efektif untuk merawat rambut rusak menggunakan bahan-bahan alami yang
+                                mudah ditemukan di rumah.
+                            </p>
+                            <a class="read-more inline-style-103" href="#">
+                                Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 4 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="skincare">
+                    <article class="blog-card h-100 inline-style-104">
+                        <div class="blog-image inline-style-105">
+                            <img alt="Anti Aging Skincare" class="inline-style-106"
+                                src="https://via.placeholder.com/400x240/fd79a8/333333?text=Anti+Aging+Skincare" />
+                            <div class="blog-category inline-style-107">
+                                Perawatan Kulit
+                            </div>
+                        </div>
+                        <div class="blog-content inline-style-108">
+                            <div class="blog-meta mb-3 inline-style-109">
+                                <span><i class="fas fa-calendar-alt me-2"></i>22 Juli 2025</span>
+                                <span><i class="fas fa-clock me-2"></i>8 min read</span>
+                            </div>
+                            <h3 class="blog-title mb-3 inline-style-110">
+                                <a class="text-decoration-none text-dark" href="#">Panduan Anti-Aging: Produk dan
+                                    Rutinas Terbaik</a>
+                            </h3>
+                            <p class="blog-excerpt mb-3 inline-style-111">
+                                Ketahui produk anti-aging yang efektif dan cara menggunakannya untuk menjaga kulit tetap
+                                muda dan sehat dalam jangka panjang.
+                            </p>
+                            <a class="read-more inline-style-112" href="#">
+                                Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 5 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="lifestyle">
+                    <article class="blog-card h-100 inline-style-113">
+                        <div class="blog-image inline-style-114">
+                            <img alt="Gaya Hidup Sehat" class="inline-style-115"
+                                src="https://via.placeholder.com/400x240/a29bfe/333333?text=Gaya+Hidup+Sehat" />
+                            <div class="blog-category inline-style-116">
+                                Gaya Hidup
+                            </div>
+                        </div>
+                        <div class="blog-content inline-style-117">
+                            <div class="blog-meta mb-3 inline-style-118">
+                                <span><i class="fas fa-calendar-alt me-2"></i>20 Juli 2025</span>
+                                <span><i class="fas fa-clock me-2"></i>4 min read</span>
+                            </div>
+                            <h3 class="blog-title mb-3 inline-style-119">
+                                <a class="text-decoration-none text-dark" href="#">Gaya Hidup Sehat untuk Kecantikan
+                                    dari Dalam</a>
+                            </h3>
+                            <p class="blog-excerpt mb-3 inline-style-120">
+                                Pelajari bagaimana pola makan, olahraga, dan tidur yang baik dapat mempengaruhi
+                                kesehatan dan kecantikan kulit Anda.
+                            </p>
+                            <a class="read-more inline-style-121" href="#">
+                                Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 6 -->
+                <div class="col-lg-4 col-md-6 mb-4" data-category="makeup">
+                    <article class="blog-card h-100 inline-style-122">
+                        <div class="blog-image inline-style-123">
+                            <img alt="Makeup Tools Guide" class="inline-style-124"
+                                src="https://via.placeholder.com/400x240/fdcb6e/333333?text=Makeup+Tools+Guide" />
+                            <div class="blog-category inline-style-125">
+                                Makeup
+                            </div>
+                        </div>
+                        <div class="blog-content inline-style-126">
+                            <div class="blog-meta mb-3 inline-style-127">
+                                <span><i class="fas fa-calendar-alt me-2"></i>18 Juli 2025</span>
+                                <span><i class="fas fa-clock me-2"></i>6 min read</span>
+                            </div>
+                            <h3 class="blog-title mb-3 inline-style-128">
+                                <a class="text-decoration-none text-dark" href="#">Panduan Lengkap Memilih Brush dan
+                                    Tools Makeup</a>
+                            </h3>
+                            <p class="blog-excerpt mb-3 inline-style-129">
+                                Mengenal jenis-jenis brush makeup dan fungsinya untuk hasil makeup yang lebih
+                                profesional dan tahan lama.
+                            </p>
+                            <a class="read-more inline-style-130" href="#">
+                                Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Blog pagination">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a aria-label="Previous" class="page-link" href="#">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a aria-label="Next" class="page-link" href="#">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Subscription -->
+    <!--<section class="newsletter-section py-5 inline-style-131">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3 class="text-white mb-3 inline-style-132">
+                        Dapatkan Tips Kecantikan Terbaru
+                    </h3>
+                    <p class="text-white mb-4 inline-style-133">
+                        Berlangganan newsletter kami untuk mendapatkan tips kecantikan, tutorial, dan penawaran khusus
+                        langsung di inbox Anda.
+                    </p>
+                    <div class="newsletter-form">
+                        <div class="input-group inline-style-134">
+                            <input class="form-control inline-style-135" placeholder="Masukkan email Anda"
+                                type="email" />
+                            <button class="btn btn-light inline-style-136" type="button">
+                                Berlangganan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    
+    <div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- No authentication needed - direct static navigation -->
+    <script>
+        // Brand-specific content functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check URL parameters for brand
+            const urlParams = new URLSearchParams(window.location.search);
+            const brand = urlParams.get('brand');
+
+            // Brand configuration
+            const brandConfig = {
+                jenauli: {
+                    title: 'Product Knowledge Jenauli',
+                    subtitle: 'Temukan rahasia produk Jenauli dan tips perawatan kulit terbaik untuk tampil lebih percaya diri',
+                    breadcrumb: 'Product Knowledge Jenauli'
+                },
+                hypure: {
+                    title: 'Product Knowledge Hypure',
+                    subtitle: 'Pelajari produk Hypure dan panduan perawatan yang tepat untuk kulit sehat dan bersinar',
+                    breadcrumb: 'Product Knowledge Hypure'
+                },
+                honiq: {
+                    title: 'Product Knowledge Honiq',
+                    subtitle: 'Eksplorasi produk Honiq dan temukan solusi perawatan kulit yang inovatif',
+                    breadcrumb: 'Product Knowledge Honiq'
+                }
+            };
+
+            // Update page content based on brand
+            if (brand && brandConfig[brand]) {
+                const config = brandConfig[brand];
+
+                // Update page title
+                document.title = config.title + ' - WooShop';
+
+                // Update page header
+                const pageTitle = document.querySelector('.page-header h1');
+                const pageSubtitle = document.querySelector('.page-header p');
+                const breadcrumbActive = document.querySelector('.breadcrumb .active');
+
+                if (pageTitle) pageTitle.textContent = config.title;
+                if (pageSubtitle) pageSubtitle.textContent = config.subtitle;
+                if (breadcrumbActive) breadcrumbActive.textContent = config.breadcrumb;
+
+                // Highlight active brand in navigation
+                const navLinks = document.querySelectorAll('.header-nav a, .mobile-nav a');
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.includes(`brand=${brand}`)) {
+                        link.style.color = '#3698D4';
+                        link.style.fontWeight = '600';
+                    }
+                });
+            }
+
+            // Category Filter Functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const articles = document.querySelectorAll('[data-category]');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.style.background = 'transparent';
+                        btn.style.color = '#4B5563';
+                        btn.style.border = '1px solid #D1D5DB';
+                        btn.classList.remove('active');
+                    });
+
+                    this.style.background = '#3698D4';
+                    this.style.color = 'white';
+                    this.style.border = 'none';
+                    this.classList.add('active');
+
+                    // Filter articles
+                    articles.forEach(article => {
+                        if (category === 'all' || article.getAttribute('data-category') === category) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Blog card hover effects
+            const blogCards = document.querySelectorAll('.blog-card');
+            blogCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.1)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+                });
+            });
+
+            // Load custom logo if exists
+            const customLogo = localStorage.getItem('customLogo');
+            const headerLogo = document.getElementById('header-logo');
+            const footerLogo = document.getElementById('footer-logo');
+
+            if (customLogo && headerLogo) {
+                headerLogo.src = customLogo;
+                headerLogo.style.display = 'inline';
+                headerLogo.nextElementSibling.style.display = 'none';
+            }
+
+            if (customLogo && footerLogo) {
+                footerLogo.src = customLogo;
+                footerLogo.style.display = 'inline';
+                footerLogo.nextElementSibling.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="js/notification.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/icon-fix.js"></script>
+</body>
+
+</html>

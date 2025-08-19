@@ -1,0 +1,56 @@
+<svg width="300" height="280" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="eyecreamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e17055;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="jarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="280" fill="url(#eyecreamBg)"/>
+  
+  <!-- Jar shadow -->
+  <ellipse cx="150" cy="210" rx="40" ry="12" fill="#000000" opacity="0.2"/>
+  
+  <!-- Eye cream jar -->
+  <rect x="110" y="130" width="80" height="80" rx="6" fill="url(#jarGradient)" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Jar lid -->
+  <ellipse cx="150" cy="130" rx="42" ry="10" fill="url(#goldAccent)"/>
+  <ellipse cx="150" cy="125" rx="38" ry="8" fill="#ffd700"/>
+  
+  <!-- Lid center -->
+  <circle cx="150" cy="125" r="12" fill="#ffffff" opacity="0.9"/>
+  <circle cx="150" cy="125" r="8" fill="url(#goldAccent)"/>
+  
+  <!-- Label -->
+  <rect x="120" y="150" width="60" height="40" rx="3" fill="#ffffff" opacity="0.95"/>
+  <text x="150" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e17055" font-weight="bold">EYE CREAM</text>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#6c757d">Anti-Aging</text>
+  <text x="150" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#6c757d">15ml</text>
+  
+  <!-- Eye symbols -->
+  <g transform="translate(130,60)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="15" ry="8" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+    <circle cx="1" cy="-1" r="2" fill="#333333"/>
+  </g>
+  <g transform="translate(170,60)" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="15" ry="8" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="#ffffff"/>
+    <circle cx="-1" cy="-1" r="2" fill="#333333"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="2" fill="#ffd700" opacity="0.6"/>
+  <circle cx="200" cy="110" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="180" cy="85" r="2.5" fill="#ffd700" opacity="0.4"/>
+</svg>

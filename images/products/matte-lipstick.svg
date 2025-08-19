@@ -1,0 +1,47 @@
+<svg width="300" height="280" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lipstickBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fecfef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tubeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f1f3f4;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="lipstickColor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc3545;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c82333;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="280" fill="url(#lipstickBg)"/>
+  
+  <!-- Lipstick shadow -->
+  <ellipse cx="150" cy="230" rx="20" ry="6" fill="#000000" opacity="0.2"/>
+  
+  <!-- Lipstick tube body -->
+  <rect x="135" y="120" width="30" height="110" rx="3" fill="url(#tubeGradient)" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Lipstick bullet -->
+  <rect x="140" y="100" width="20" height="30" fill="url(#lipstickColor)"/>
+  <polygon points="140,100 160,100 150,85" fill="url(#lipstickColor)"/>
+  
+  <!-- Tube cap -->
+  <rect x="132" y="80" width="36" height="50" rx="4" fill="#3698D4"/>
+  <rect x="134" y="82" width="32" height="8" rx="2" fill="#52A9DE"/>
+  
+  <!-- Brand label -->
+  <rect x="138" y="150" width="24" height="20" fill="#ffffff" opacity="0.9" rx="1"/>
+  <text x="150" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#dc3545" font-weight="bold">MATTE</text>
+  <text x="150" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#6c757d">LIPSTICK</text>
+  
+  <!-- Decorative lips -->
+  <path d="M 120 60 Q 130 50 140 60 Q 150 70 160 60 Q 170 50 180 60 Q 170 75 150 75 Q 130 75 120 60" 
+        fill="#ff6b9d" opacity="0.6"/>
+  
+  <!-- Sparkles -->
+  <circle cx="110" cy="90" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="190" cy="100" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="175" cy="75" r="2" fill="#ffffff" opacity="0.7"/>
+</svg>

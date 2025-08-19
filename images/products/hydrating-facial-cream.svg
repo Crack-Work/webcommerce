@@ -1,0 +1,33 @@
+<svg width="300" height="280" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="creamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="jarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="280" fill="url(#creamBg)"/>
+  
+  <!-- Cream Jar -->
+  <ellipse cx="150" cy="200" rx="45" ry="15" fill="#e9ecef" opacity="0.5"/>
+  <rect x="105" y="120" width="90" height="80" rx="5" fill="url(#jarGradient)" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Jar Lid -->
+  <ellipse cx="150" cy="120" rx="47" ry="12" fill="#3698D4"/>
+  <ellipse cx="150" cy="115" rx="42" ry="8" fill="#52A9DE"/>
+  
+  <!-- Label -->
+  <rect x="115" y="140" width="70" height="40" rx="3" fill="#ffffff" opacity="0.9"/>
+  <text x="150" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3698D4" font-weight="bold">HYDRATING</text>
+  <text x="150" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6c757d">Facial Cream</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="120" cy="80" r="3" fill="#ffffff" opacity="0.6"/>
+  <circle cx="180" cy="90" r="2" fill="#ffffff" opacity="0.4"/>
+  <circle cx="160" cy="70" r="2.5" fill="#ffffff" opacity="0.5"/>
+</svg>

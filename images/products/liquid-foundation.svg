@@ -1,0 +1,61 @@
+<svg width="300" height="280" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="foundationBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdcb6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e17055;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bottleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="foundationLiquid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ddbea9;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#cb997e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="280" fill="url(#foundationBg)"/>
+  
+  <!-- Bottle shadow -->
+  <ellipse cx="150" cy="230" rx="25" ry="8" fill="#000000" opacity="0.2"/>
+  
+  <!-- Foundation bottle -->
+  <rect x="125" y="90" width="50" height="140" rx="8" fill="url(#bottleGradient)" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Foundation liquid -->
+  <rect x="130" y="110" width="40" height="115" rx="5" fill="url(#foundationLiquid)"/>
+  
+  <!-- Pump dispenser -->
+  <rect x="135" y="80" width="30" height="20" rx="3" fill="#e17055"/>
+  <rect x="142" y="70" width="16" height="18" rx="2" fill="#fdcb6e"/>
+  <rect x="147" y="65" width="6" height="12" rx="1" fill="#ffffff"/>
+  
+  <!-- Label -->
+  <rect x="130" y="130" width="40" height="50" fill="#ffffff" opacity="0.95" rx="2"/>
+  <text x="150" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e17055" font-weight="bold">FOUNDATION</text>
+  <text x="150" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#6c757d">Full Coverage</text>
+  <text x="150" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#6c757d">Long Lasting</text>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" fill="#6c757d">30ml</text>
+  
+  <!-- Skin tone swatches -->
+  <circle cx="135" cy="195" r="4" fill="#f5deb3"/>
+  <circle cx="145" cy="195" r="4" fill="#ddbea9"/>
+  <circle cx="155" cy="195" r="4" fill="#cb997e"/>
+  <circle cx="165" cy="195" r="4" fill="#a0674b"/>
+  
+  <!-- Makeup brush illustration -->
+  <g transform="translate(200,80)" opacity="0.6">
+    <rect x="0" y="0" width="4" height="40" fill="#8b4513"/>
+    <ellipse cx="2" cy="-5" rx="8" ry="5" fill="#daa520"/>
+  </g>
+  
+  <!-- Powder puff -->
+  <circle cx="100" cy="120" r="12" fill="#ffffff" opacity="0.7"/>
+  <circle cx="100" cy="120" r="8" fill="#f8f9fa" opacity="0.8"/>
+  
+  <!-- Decorative sparkles -->
+  <circle cx="110" cy="60" r="1.5" fill="#ffd700" opacity="0.8"/>
+  <circle cx="190" cy="70" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="170" cy="50" r="2" fill="#ffd700" opacity="0.7"/>
+</svg>

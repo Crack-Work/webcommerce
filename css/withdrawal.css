@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #bfe4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Konten utama */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.withdraw-container {
+    background: #bfe4f8;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2196f3;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.info-card {
+    background: linear-gradient(to right, #64b5f6, #2196f3);
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.info-box div {
+    background: rgba(255,255,255,0.9);
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    width: 48%;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[disabled] {
+    background: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.input-rp {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.input-rp span {
+    background: #f0f0f0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #2196f3;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.note {
+    font-size: 12px;
+    background: #ffe5e5;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Popup */
+/* ===== Popup Container ===== */
+.popup {
+    display: none; /* awalnya sembunyi */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup.show {
+    display: flex; /* munculkan popup */
+}
+
+/* ===== Popup Detail ===== */
+.detail-popup {
+    max-width: 400px;
+    background: white;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.popup-header {
+    background: #2196f3;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currency-badge {
+    background: white;
+    color: #2196f3;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.popup-body {
+    padding: 15px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.status.waiting {
+    background: #fff4e5;
+    color: #ff9800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.total-row {
+    font-size: 16px;
+    color: #2196f3;
+    font-weight: bold;
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.popup-actions button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.popup-actions .cancel {
+    background: #f5f5f5;
+}
+
+.popup-actions .confirm {
+    background: #2196f3;
+    color: white;
+}
+
+/* ===== Popup Success ===== */
+.success-popup {
+    max-width: 350px;
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+    .withdraw-container {
+        padding: 15px;
+    }
+    .info-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

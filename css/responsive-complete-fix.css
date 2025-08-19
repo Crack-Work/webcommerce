@@ -1,0 +1,265 @@
+/* COMPLETE RESPONSIVE FIX - NUCLEAR OPTION */
+
+/* Reset all fixed widths to be responsive */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Force all sections to stack properly */
+body > section,
+main > section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+    clear: both !important;
+    margin-bottom: 0 !important;
+}
+
+/* Container system override */
+.container, .container-fluid, [style*="max-width: 1280px"], [style*="width: 1280px"] {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+/* Testimonial section complete fix */
+.apa-kata-mereka,
+.testimonial-section {
+    padding: 60px 0 !important;
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(248, 232, 238, 0.05) 100%) !important;
+}
+
+/* Testimonial carousel fix */
+.testimonial-carousel {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.carousel-inner {
+    height: auto !important;
+    min-height: 300px !important;
+}
+
+.testimonial-slide {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 20px !important;
+}
+
+/* Testimonial cards responsive */
+.testimonial-slide > div,
+[style*="width: 394.66px"],
+[style*="width: 394.67px"] {
+    width: calc(33.333% - 20px) !important;
+    min-width: 300px !important;
+    max-width: 400px !important;
+    height: auto !important;
+    min-height: 280px !important;
+    flex: none !important;
+}
+
+/* Fix all internal card elements */
+[style*="width: 346.66px"],
+[style*="width: 346.67px"] {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Names and locations fix */
+[style*="width: 88.27px"] {
+    width: 100% !important;
+    flex: 1 !important;
+}
+
+[style*="width: 89px"] h4,
+[style*="width: 48px"] p {
+    width: 100% !important;
+    height: auto !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+}
+
+/* Our Trusted Brands section fix */
+.our-trusted-brands {
+    padding: 80px 0 !important;
+    background: white !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+/* Brand cards grid */
+.our-trusted-brands [style*="display: flex"][style*="flex-direction: row"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    padding: 0 20px !important;
+}
+
+.our-trusted-brands [style*="display: flex"][style*="flex-direction: column"] {
+    width: 100% !important;
+    height: auto !important;
+    padding: 30px !important;
+    border: 2px solid #E5E7EB !important;
+    border-radius: 16px !important;
+    background: white !important;
+}
+
+/* Stay Informed section fix */
+.stay-informed {
+    padding: 80px 0 !important;
+    background: white !important;
+}
+
+.stay-informed h2 {
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 50px !important;
+}
+
+/* Stay Informed cards grid */
+.informes-grid,
+[style*="width: 1232px"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.informes-grid > div,
+[style*="width: 389.33px"] {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 400px !important;
+}
+
+/* Mengapa Memilih Kami section */
+.mengapa-memilih-kami {
+    padding: 80px 0 !important;
+    background: white !important;
+}
+
+.mengapa-memilih-kami .row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 30px !important;
+    padding: 0 20px !important;
+}
+
+.mengapa-memilih-kami .col-md-3 {
+    width: 100% !important;
+}
+
+/* Fix all text containers */
+h1, h2, h3, h4, h5, h6, p, span {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    word-wrap: break-word !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991.98px) {
+    .testimonial-slide {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .testimonial-slide > div {
+        width: 100% !important;
+        max-width: 500px !important;
+    }
+    
+    .our-trusted-brands [style*="display: flex"][style*="flex-direction: row"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .informes-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .mengapa-memilih-kami .row {
+        grid-template-columns: 1fr !important;
+    }
+    
+    [style*="padding: 0px 80px"] {
+        padding: 0 20px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container, .container-fluid {
+        padding: 0 15px !important;
+    }
+    
+    section {
+        padding: 40px 0 !important;
+    }
+    
+    h2 {
+        font-size: 28px !important;
+    }
+    
+    .testimonial-slide {
+        padding: 10px !important;
+    }
+}
+
+/* Force visibility and proper stacking */
+section {
+    visibility: visible !important;
+    position: relative !important;
+    z-index: auto !important;
+}
+
+.hero-banner { z-index: 1 !important; }
+.product-unggulan { z-index: 2 !important; }
+.our-trusted-brands { z-index: 3 !important; }
+.mengapa-memilih-kami { z-index: 4 !important; }
+.apa-kata-mereka { z-index: 5 !important; }
+.stay-informed { z-index: 6 !important; }
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+/* Fix carousel controls */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute !important;
+    z-index: 1000 !important;
+    width: 45px !important;
+    height: 45px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+.carousel-control-prev {
+    left: 10px !important;
+}
+
+.carousel-control-next {
+    right: 10px !important;
+}
+
+/* Nuclear option - override ALL inline styles */
+[style] {
+    max-width: 100% !important;
+}
+
+[style*="width:"][style*="px"] {
+    width: 100% !important;
+}
+
+[style*="min-width:"][style*="px"] {
+    min-width: 0 !important;
+}

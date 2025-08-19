@@ -1,0 +1,242 @@
+/* SIMPLE RESPONSIVE SOLUTION - CSS ONLY */
+
+/* Reset and force all elements to be responsive */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Container system - simple and effective */
+.container, 
+[style*="max-width: 1280px"],
+[style*="width: 1280px"],
+[style*="width: 1232px"] {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+/* Product cards - uniform height */
+.product-unggulan .card {
+    height: 400px !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.product-unggulan .card img {
+    height: 180px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.product-unggulan .card-body {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* Our Trusted Brands - full width like Product section */
+.our-trusted-brands {
+    background: white !important;
+    padding: 80px 0 !important;
+    width: 100% !important;
+}
+
+.our-trusted-brands > div {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.our-trusted-brands [style*="flex-direction: row"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+}
+
+.our-trusted-brands [style*="flex-direction: column"] {
+    background: white !important;
+    border: 2px solid #E5E7EB !important;
+    border-radius: 16px !important;
+    padding: 30px !important;
+    text-align: center !important;
+    height: 100% !important;
+}
+
+/* Testimonial section */
+.testimonial-section .carousel-inner {
+    padding: 20px !important;
+}
+
+.testimonial-slide {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    justify-content: center !important;
+}
+
+.testimonial-slide > div {
+    width: 100% !important;
+    height: 280px !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+}
+
+/* Stay Informed - proper 3 column grid */
+.informes-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.informes-grid > div {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 500px !important;
+}
+
+/* Contact section - side by side */
+.contact-section [style*="flex-direction: row"]:not([style*="align-items: center"]) {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+    align-items: start !important;
+}
+
+.contact-section iframe {
+    width: 100% !important;
+    height: 400px !important;
+    max-width: none !important;
+}
+
+/* Mengapa Memilih Kami - 4 column grid */
+.mengapa-memilih-kami .row {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px !important;
+    padding: 0 20px !important;
+}
+
+.mengapa-memilih-kami .col-md-3 {
+    width: 100% !important;
+}
+
+/* FAQ section */
+.faq-section {
+    padding: 80px 20px !important;
+}
+
+.faq-section h2 {
+    text-align: center !important;
+    margin-bottom: 50px !important;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Fix all text widths */
+h1, h2, h3, h4, h5, h6, p, span {
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+}
+
+/* Force remove fixed widths */
+[style*="width: 86px"],
+[style*="width: 89px"],
+[style*="width: 48px"],
+[style*="width: 56px"],
+[style*="width: 335px"],
+[style*="width: 195.09px"],
+[style*="width: 85.73px"] {
+    width: auto !important;
+    min-width: 0 !important;
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) {
+    .informes-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .mengapa-memilih-kami .row {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .our-trusted-brands [style*="flex-direction: row"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    /* Single column layouts */
+    .informes-grid,
+    .mengapa-memilih-kami .row,
+    .our-trusted-brands [style*="flex-direction: row"],
+    .contact-section [style*="flex-direction: row"]:not([style*="align-items: center"]) {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .testimonial-slide {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Smaller padding */
+    .container,
+    [style*="padding: 0px 80px"] {
+        padding: 0 15px !important;
+    }
+    
+    section {
+        padding: 60px 0 !important;
+    }
+    
+    /* Typography adjustments */
+    h1 { font-size: 1.8rem !important; }
+    h2 { font-size: 1.6rem !important; }
+    h3 { font-size: 1.4rem !important; }
+    
+    /* Contact iframe */
+    .contact-section iframe {
+        height: 250px !important;
+    }
+    
+    /* Product cards */
+    .product-unggulan .card {
+        height: 350px !important;
+    }
+    
+    .product-unggulan .card img {
+        height: 150px !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px !important;
+    }
+    
+    section {
+        padding: 40px 0 !important;
+    }
+    
+    .faq-section {
+        padding: 40px 10px !important;
+    }
+    
+    .contact-section iframe {
+        height: 200px !important;
+    }
+}

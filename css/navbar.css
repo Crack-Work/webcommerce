@@ -1,0 +1,98 @@
+/* navbar.css */
+
+/* Struktur utama */
+.main-header {
+  background-color: white;
+  font-family: 'sans-serif', sans-serif;
+  height: 90px;
+}
+
+/* Padding kanan kiri 40px */
+.navbar-container {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+/* Logo */
+.logo-img {
+  height: 45px;
+}
+
+.logo-fallback {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Navigasi */
+.navbar-nav .nav-link {
+  color: #2198D6;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #2198D6;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* Ikon kanan */
+.nav-icon {
+  font-size: 18px;
+  color: #2198D6;
+}
+
+.nav-icon:hover {
+  color: #2198D6;
+}
+
+/* Badge jumlah notif di icon */
+.notif-dropdown .notif-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  padding: 4px 6px;
+}
+
+/* Item notif */
+.notif-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.notif-item:last-child {
+  border-bottom: none;
+}
+.notif-title {
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.notif-text {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+.notif-time {
+  font-size: 12px;
+  color: #999;
+}
+.notif-star {
+  color: gold;
+  margin-right: 5px;
+}

@@ -1,0 +1,563 @@
+/* WooShop - Complete Responsive Overrides */
+
+/* ============================================
+   MOBILE FIRST RESPONSIVE DESIGN
+   ============================================ */
+
+/* Prevent horizontal scroll on all devices */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+/* Global container fixes */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Container max-widths for different breakpoints */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Section padding adjustments */
+section {
+    padding: clamp(40px, 8vw, 80px) 0 !important;
+    overflow: hidden !important;
+}
+
+/* Container fluid responsive padding */
+.container-fluid {
+    padding-left: clamp(15px, 3vw, 80px) !important;
+    padding-right: clamp(15px, 3vw, 80px) !important;
+}
+
+/* ============================================
+   MOBILE DEVICES (max-width: 575.98px)
+   ============================================ */
+@media (max-width: 575.98px) {
+    /* Header adjustments */
+    .main-header {
+        height: 60px !important;
+    }
+    
+    .header-logo img {
+        max-width: 120px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+    
+    /* Navigation adjustments */
+    .header-nav {
+        display: none !important;
+    }
+    
+    /* Mobile action bar spacing */
+    .mobile-action-bar {
+        padding: 8px !important;
+    }
+    
+    .mobile-action-bar a {
+        font-size: 18px !important;
+    }
+    
+    /* Hero banner mobile */
+    .hero-banner {
+        height: 50vh !important;
+        min-height: 300px !important;
+    }
+    
+    .hero-banner h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-banner p {
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-banner .btn {
+        font-size: 0.875rem !important;
+        padding: 8px 16px !important;
+    }
+    
+    /* Hide decorative elements on mobile */
+    .hero-banner .col-md-6:last-child {
+        display: none !important;
+    }
+    
+    /* Product cards mobile */
+    .product-card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .product-card img {
+        height: 180px !important;
+    }
+    
+    .product-card .card-title {
+        font-size: 0.9rem !important;
+    }
+    
+    .product-card .price {
+        font-size: 1rem !important;
+    }
+    
+    /* Product grid mobile */
+    .product-unggulan-grid {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+    
+    .product-unggulan-grid > * {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+    
+    /* Feature cards mobile */
+    .feature-card {
+        padding: 20px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .feature-card p {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Testimonial cards mobile */
+    .testimonial-card {
+        padding: 15px !important;
+    }
+    
+    .testimonial-card .testimonial-text {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Section titles mobile */
+    .section-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Buttons mobile */
+    .btn {
+        font-size: 0.875rem !important;
+        padding: 8px 16px !important;
+    }
+    
+    .btn-lg {
+        font-size: 1rem !important;
+        padding: 10px 20px !important;
+    }
+    
+    /* Forms mobile */
+    .form-control, .form-select {
+        font-size: 0.875rem !important;
+        padding: 8px 12px !important;
+    }
+    
+    /* Footer mobile */
+    .footer-section {
+        padding: 30px 0 !important;
+    }
+    
+    .footer-section h5 {
+        font-size: 1rem !important;
+    }
+    
+    .footer-section p, .footer-section a {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* ============================================
+   SMALL TABLETS (576px - 767.98px)
+   ============================================ */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Header adjustments */
+    .main-header {
+        height: 70px !important;
+    }
+    
+    /* Product grid */
+    .product-unggulan-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    
+    /* Hero adjustments */
+    .hero-banner h1 {
+        font-size: 2rem !important;
+    }
+    
+    /* Product cards */
+    .product-card img {
+        height: 200px !important;
+    }
+}
+
+/* ============================================
+   TABLETS (768px - 991.98px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Container padding */
+    .container-fluid {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    
+    /* Product grid */
+    .product-unggulan-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+    }
+    
+    /* Hero adjustments */
+    .hero-banner h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    /* Feature grid */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ============================================
+   DESKTOP (992px - 1199.98px)
+   ============================================ */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Container max-width */
+    .container {
+        max-width: 960px !important;
+    }
+    
+    /* Product grid */
+    .product-unggulan-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 24px !important;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text truncation */
+.text-truncate-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.text-truncate-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Responsive spacing */
+.gap-responsive {
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.p-responsive {
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.my-responsive {
+    margin-top: clamp(1rem, 4vw, 3rem);
+    margin-bottom: clamp(1rem, 4vw, 3rem);
+}
+
+/* Responsive font sizes */
+.fs-responsive-sm {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+}
+
+.fs-responsive {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.fs-responsive-lg {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+.fs-responsive-xl {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* ============================================
+   SPECIFIC COMPONENT FIXES
+   ============================================ */
+
+/* Shopping cart responsive */
+@media (max-width: 767.98px) {
+    .cart-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .cart-table table {
+        min-width: 500px;
+    }
+    
+    .cart-summary {
+        margin-top: 30px;
+    }
+}
+
+/* Checkout form responsive */
+@media (max-width: 767.98px) {
+    .checkout-section {
+        padding: 1.5rem !important;
+        margin-bottom: 20px;
+    }
+    
+    .checkout-section h4 {
+        font-size: 1.25rem !important;
+    }
+}
+
+/* Profile page responsive */
+@media (max-width: 991.98px) {
+    .profile-sidebar {
+        margin-bottom: 30px;
+    }
+    
+    .profile-content {
+        padding: 20px !important;
+    }
+}
+
+/* Product detail responsive */
+@media (max-width: 767.98px) {
+    .product-gallery {
+        margin-bottom: 30px;
+    }
+    
+    .product-details h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .product-price-large {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Notification dropdown responsive */
+@media (max-width: 575.98px) {
+    .notification-dropdown {
+        width: calc(100vw - 30px) !important;
+        left: 15px !important;
+        right: 15px !important;
+    }
+}
+
+/* ============================================
+   CRITICAL OVERFLOW FIXES
+   ============================================ */
+
+/* Prevent elements from exceeding viewport */
+img, video, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix common Bootstrap issues */
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    max-width: 100% !important;
+}
+
+/* Fix hero banner overflow */
+.hero-banner,
+.hero-banner * {
+    max-width: 100vw !important;
+}
+
+/* Fix product grid overflow */
+.product-unggulan-grid,
+.product-grid,
+.row {
+    overflow-x: hidden !important;
+}
+
+/* ============================================
+   PREVENT COMMON OVERFLOW ISSUES
+   ============================================ */
+
+/* Prevent wide tables from breaking layout */
+table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Prevent long URLs from breaking layout */
+a {
+    word-break: break-word;
+}
+
+/* Prevent code blocks from breaking layout */
+pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Fix Bootstrap modal on mobile */
+@media (max-width: 575.98px) {
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100% - 1rem);
+    }
+}
+
+/* ============================================
+   ADDITIONAL RESPONSIVE FIXES
+   ============================================ */
+
+/* Fix navbar on all devices */
+@media (max-width: 991.98px) {
+    .main-header .container-fluid {
+        padding: 0 15px !important;
+    }
+    
+    .header-logo {
+        flex-shrink: 0;
+    }
+    
+    .header-actions {
+        gap: 10px !important;
+    }
+    
+    .header-actions a {
+        font-size: 18px !important;
+    }
+}
+
+/* Fix sections with fixed widths */
+[style*="width:"],
+[style*="max-width:"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Responsive images in all contexts */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Fix card layouts */
+.card {
+    width: 100% !important;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Fix grid layouts */
+@media (max-width: 575.98px) {
+    [class*="col-"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+}
+
+/* Fix button sizes on mobile */
+@media (max-width: 575.98px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Fix form elements */
+@media (max-width: 767.98px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    input, select, textarea {
+        width: 100% !important;
+    }
+}
+
+/* Ensure sections don't overflow */
+section {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+section > .container,
+section > .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}

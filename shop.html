@@ -7,7 +7,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Shop - Sareo E-commerce</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -107,19 +110,19 @@
                         <div class="filter-content">
                             <div class="form-check">
                                 <input class="form-check-input" id="price1" type="checkbox" value="0-25" />
-                                <label class="form-check-label" for="price1">$0 - $25</label>
+                                <label class="form-check-label" for="price1">Rp.0 - Rp100,000</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" id="price2" type="checkbox" value="25-50" />
-                                <label class="form-check-label" for="price2">$25 - $50</label>
+                                <label class="form-check-label" for="price2">Rp100,000 - Rp300,000</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" id="price3" type="checkbox" value="50-100" />
-                                <label class="form-check-label" for="price3">$50 - $100</label>
+                                <label class="form-check-label" for="price3">Rp350,000 - Rp500,000</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" id="price4" type="checkbox" value="100+" />
-                                <label class="form-check-label" for="price4">$100+</label>
+                                <label class="form-check-label" for="price4">Rp500,000 +</label>
                             </div>
                         </div>
                     </div>
@@ -170,228 +173,225 @@
                     </div>
                 </div>
                 <!-- Products Grid -->
-                <div class="row" id="products-grid">
-                    <!-- Product Card 1 - Hydrating Facial Cream -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product-card h-100 inline-style-87">
-                            <div class="product-image inline-style-88">
-                                <img alt="Hydrating Facial Cream" class="inline-style-89"
-                                    src="images/products/hydrating-facial-cream.svg" />
-                                <div class="product-badge inline-style-90">
-                                    BEST SELLER
-                                </div>
-                                <button class="btn btn-primary wishlist-btn inline-style-91">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card" data-category="skincare">
+                        <div class="product-box">
+                        <span class="badge sale">Sale</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE.png" alt="Hydrating Facial Cream">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
                             </div>
-                            <div class="product-info p-3">
-                                <div class="product-category mb-2 inline-style-92">
-                                    Skincare
-                                </div>
-                                <h5 class="product-title mb-2 inline-style-93">
-                                    <a class="text-decoration-none text-dark" href="product.html">Hydrating Facial
-                                        Cream</a>
-                                </h5>
-                                <div class="product-rating mb-2">
-                                    <span class="stars inline-style-94">★★★★★</span>
-                                    <span class="inline-style-95">(124 reviews)</span>
-                                </div>
-                                <div class="product-price mb-3">
-                                    <span class="current-price inline-style-96">
-                                        Rp 285.000
-                                    </span>
-                                    <span class="original-price inline-style-97">
-                                        Rp 350.000
-                                    </span>
-                                </div>
-                                <button class="btn-cart w-100" onclick="addToCart(1)">
-                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                                </button>
+                        <button class="btn-add-cart">
+                            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                        </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Hydrating Facial Cream</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$89.99</span>
+                            <span class="old-price">$129.99</span>
                             </div>
+                            <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(24)</span>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <!-- Product Card 2 - Vitamin C Serum -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product-card h-100 inline-style-98">
-                            <div class="product-image inline-style-99">
-                                <img alt="Vitamin C Serum" class="inline-style-100"
-                                    src="images/products/vitamin-c-serum.svg" />
-                                <div class="product-badge inline-style-101">
-                                    NEW
-                                </div>
-                                <button class="btn btn-primary wishlist-btn inline-style-102">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card" data-category="promo">
+                        <div class="product-box">
+                        <span class="badge sale">Sale</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-1.png" alt="Gentle Cleanser Foam">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
                             </div>
-                            <div class="product-info p-3">
-                                <div class="product-category mb-2 inline-style-103">
-                                    Skincare
-                                </div>
-                                <h5 class="product-title mb-2 inline-style-104">
-                                    <a class="text-decoration-none text-dark" href="product.html">Vitamin C Brightening
-                                        Serum</a>
-                                </h5>
-                                <div class="product-rating mb-2">
-                                    <span class="stars inline-style-105">★★★★☆</span>
-                                    <span class="inline-style-106">(89 reviews)</span>
-                                </div>
-                                <div class="product-price mb-3">
-                                    <span class="current-price inline-style-107">
-                                        Rp 195.000
-                                    </span>
-                                </div>
-                                <button class="btn-cart w-100" onclick="addToCart(2)">
-                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                                </button>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Gentle Cleanser Foam</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$140.00</span>
+                            <span class="old-price">$200.00</span>
                             </div>
+                            <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(87)</span>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <!-- Product Card 3 - Matte Lipstick -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product-card h-100 inline-style-108">
-                            <div class="product-image inline-style-109">
-                                <img alt="Matte Lipstick" class="inline-style-110"
-                                    src="images/products/matte-lipstick.svg" />
-                                <button class="btn btn-primary wishlist-btn inline-style-111">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card" data-category="makeup">
+                        <div class="product-box">
+                        <span class="badge new">New</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-2.png" alt="Matte Lipstick">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
                             </div>
-                            <div class="product-info p-3">
-                                <div class="product-category mb-2 inline-style-112">
-                                    Makeup
-                                </div>
-                                <h5 class="product-title mb-2 inline-style-113">
-                                    <a class="text-decoration-none text-dark" href="product.html?id=3">Long-lasting
-                                        Matte Lipstick</a>
-                                </h5>
-                                <div class="product-rating mb-2">
-                                    <span class="stars inline-style-114">★★★★★</span>
-                                    <span class="inline-style-115">(203 reviews)</span>
-                                </div>
-                                <div class="product-price mb-3">
-                                    <span class="current-price inline-style-116">
-                                        Rp 145.000
-                                    </span>
-                                    <span class="original-price inline-style-117">
-                                        Rp 165.000
-                                    </span>
-                                </div>
-                                <button class="btn-cart w-100" onclick="addToCart(3)">
-                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                                </button>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Matte Lipstick</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$59.99</span>
                             </div>
+                            <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span>(112)</span>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <!-- Product Card 4 - Sunscreen SPF 50 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product-card h-100 inline-style-118">
-                            <div class="product-image inline-style-119">
-                                <img alt="Sunscreen SPF 50" class="inline-style-120"
-                                    src="images/products/sunscreen-spf50.svg" />
-                                <div class="product-badge inline-style-121">
-                                    TRENDING
-                                </div>
-                                <button class="btn btn-primary wishlist-btn inline-style-122">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card" data-category="skincare">
+                        <div class="product-box">
+                        <span class="badge new">New</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                           <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
                             </div>
-                            <div class="product-info p-3">
-                                <div class="product-category mb-2 inline-style-123">
-                                    Skincare
-                                </div>
-                                <h5 class="product-title mb-2 inline-style-124">
-                                    <a class="text-decoration-none text-dark" href="product.html?id=4">Daily Protection
-                                        Sunscreen SPF 50</a>
-                                </h5>
-                                <div class="product-rating mb-2">
-                                    <span class="stars inline-style-125">★★★★☆</span>
-                                    <span class="inline-style-126">(156 reviews)</span>
-                                </div>
-                                <div class="product-price mb-3">
-                                    <span class="current-price inline-style-127">
-                                        Rp 125.000
-                                    </span>
-                                </div>
-                                <button class="btn-cart w-100" onclick="addToCart(4)">
-                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                                </button>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brightening Eye Cream</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$520.00</span>
                             </div>
+                            <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(103)</span>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <!-- Product Card 5 - Eye Cream -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product-card h-100 inline-style-128">
-                            <div class="product-image inline-style-129">
-                                <img alt="Anti-Aging Eye Cream" class="inline-style-130"
-                                    src="images/products/eye-cream.svg" />
-                                <button class="btn btn-primary wishlist-btn inline-style-131">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card" data-category="skincare">
+                        <div class="product-box">
+                        <span class="badge new">New</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
                             </div>
-                            <div class="product-info p-3">
-                                <div class="product-category mb-2 inline-style-132">
-                                    Skincare
-                                </div>
-                                <h5 class="product-title mb-2 inline-style-133">
-                                    <a class="text-decoration-none text-dark" href="product.html?id=5">Anti-Aging Eye
-                                        Cream</a>
-                                </h5>
-                                <div class="product-rating mb-2">
-                                    <span class="stars inline-style-134">★★★★★</span>
-                                    <span class="inline-style-135">(78 reviews)</span>
-                                </div>
-                                <div class="product-price mb-3">
-                                    <span class="current-price inline-style-136">
-                                        Rp 320.000
-                                    </span>
-                                    <span class="original-price inline-style-137">
-                                        Rp 380.000
-                                    </span>
-                                </div>
-                                <button class="btn-cart w-100" onclick="addToCart(5)">
-                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                                </button>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brightening Eye Cream</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$520.00</span>
                             </div>
+                            <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(103)</span>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <!-- Product Card 6 - Foundation -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product-card h-100 inline-style-138">
-                            <div class="product-image inline-style-139">
-                                <img alt="Liquid Foundation" class="inline-style-140"
-                                    src="images/products/liquid-foundation.svg" />
-                                <div class="product-badge inline-style-141">
-                                    SALE
-                                </div>
-                                <button class="btn btn-primary wishlist-btn inline-style-142">
-                                    <i class="fas fa-heart"></i>
-                                </button>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card" data-category="skincare">
+                        <div class="product-box">
+                        <span class="badge new">New</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
                             </div>
-                            <div class="product-info p-3">
-                                <div class="product-category mb-2 inline-style-143">
-                                    Makeup
-                                </div>
-                                <h5 class="product-title mb-2 inline-style-144">
-                                    <a class="text-decoration-none text-dark" href="product.html?id=6">Full Coverage
-                                        Liquid Foundation</a>
-                                </h5>
-                                <div class="product-rating mb-2">
-                                    <span class="stars inline-style-145">★★★★☆</span>
-                                    <span class="inline-style-146">(167 reviews)</span>
-                                </div>
-                                <div class="product-price mb-3">
-                                    <span class="current-price inline-style-147">
-                                        Rp 215.000
-                                    </span>
-                                    <span class="original-price inline-style-148">
-                                        Rp 285.000
-                                    </span>
-                                </div>
-                                <button class="btn-cart w-100" onclick="addToCart(6)">
-                                    <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                                </button>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brightening Eye Cream</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$520.00</span>
+                            </div>
+                            <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(103)</span>
                             </div>
                         </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 7 -->
+                    <div class="product-card" data-category="skincare">
+                        <div class="product-box">
+                        <span class="badge new">New</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brightening Eye Cream</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$520.00</span>
+                            </div>
+                            <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(103)</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 8 -->
+                    <div class="product-card" data-category="skincare">
+                        <div class="product-box">
+                        <span class="badge new">New</span>
+                        <div class="product-img">
+                            <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                            <div class="product-actions">
+                            <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                            <a href="product.html" class="btn-action"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                            <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brightening Eye Cream</h3>
+                            <div class="price-wrapper">
+                            <span class="price">$520.00</span>
+                            </div>
+                            <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>(103)</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
                     </div>
                 </div>
                 <!-- Pagination -->

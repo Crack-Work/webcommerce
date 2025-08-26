@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sareo E-commerce - Premium eCommerce Store</title>
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- Custom CSS -->
      <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -18,12 +26,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    
 </head>
+
+
 <body>
 
    <!-- Navbar placeholder -->
@@ -33,299 +38,356 @@
  <script src="navbar.js"></script>
 
 
-    <!-- ===== HERO BANNER ===== -->
+    <!-- ===== HERO BANNER (IMAGE SLIDER ONLY) ===== -->
     <section class="hero-banner">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active hero-slide hero-slide-1">
-                    <div class="container">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-6">
-                                <h1 class="hero-title">Summer Sale</h1>
-                                <p class="hero-subtitle">Up to 20% off on selected items</p>
-                                <a href="shop.html" class="btn btn-light btn-lg">Shop Now</a>
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <div class="hero-img-box">
-                                    <i class="fas fa-shopping-bag"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item hero-slide hero-slide-2">
-                    <div class="container">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-6">
-                                <h1 class="hero-title">New Arrivals</h1>
-                                <p class="hero-subtitle">Discover the latest beauty products</p>
-                                <a href="shop.html" class="btn btn-light btn-lg">Explore</a>
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <div class="hero-img-box">
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item hero-slide hero-slide-3">
-                    <div class="container">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-6">
-                                <h1 class="hero-title">Free Shipping</h1>
-                                <p class="hero-subtitle">On orders over Rp 500.000</p>
-                                <a href="shop.html" class="btn btn-dark btn-lg">Order Now</a>
-                            </div>
-                            <div class="col-md-6 text-center">
-                                <div class="hero-img-box dark">
-                                    <i class="fas fa-truck"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="images/bg1.jpg" class="d-block w-100" alt="Banner 1">
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="images/bg2.jpg" class="d-block w-100" alt="Banner 2">
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="images/bg3.jpg" class="d-block w-100" alt="Banner 3">
+          </div>
+
         </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
     </section>
 
-        <!-- ===== SECTION PRODUK UNGGULAN ===== -->
+
+    <!-- ===== SECTION PRODUK UNGGULAN ===== -->
     <section class="product-unggulan-section">
-        <div class="container">
-            <!-- Header -->
-            <div class="text-center mb-5">
-                <h2>Produk Unggulan</h2>
-                <p class="section-desc">
-                    Koleksi produk terbaik kami yang disukai oleh banyak pelanggan
-                </p>
+      <div class="container">
+        <!-- Header -->
+        <div class="text-center mb-5">
+          <h2 class="section-title">Produk Unggulan</h2>
+          <p class="section-desc">
+            Koleksi produk terbaik kami yang disukai oleh banyak pelanggan
+          </p>
 
-                <!-- Category Filter -->
-                <div class="category-filter d-flex justify-content-center mb-5">
-                    <div class="filter-wrapper">
-                        <button class="filter-btn active" data-category="all">Semua</button>
-                        <button class="filter-btn" data-category="skincare">Jenauli</button>
-                        <button class="filter-btn" data-category="makeup">Honiq</button>
-                        <button class="filter-btn" data-category="promo">Hypure</button>
-                    </div>
-                </div>
+          <!-- Category Filter -->
+          <div class="category-filter d-flex justify-content-center mb-5">
+            <div class="filter-wrapper">
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="skincare">Jenauli</button>
+              <button class="filter-btn" data-category="makeup">Honiq</button>
+              <button class="filter-btn" data-category="promo">Hypure</button>
             </div>
-
-            <!-- Products Grid -->
-            <div class="product-grid">
-                <!-- Product Card 1 -->
-                <div class="product-card" data-category="skincare">
-                    <div class="product-box">
-                        <div class="product-img gradient-1">
-                            <img src="images/products/IMAGE.png" alt="Hydrating Facial Cream">
-                        </div>
-                        <div class="product-info">
-                            <h3>Hydrating Facial Cream</h3>
-                            <div class="rating">
-                                <div class="stars">
-                                    <i class="fas fa-star">★★★★☆</i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span>(128)</span>
-                            </div>
-                            <div class="price-cart">
-                                <span class="price">Rp 289.000</span>
-                                <button class="btn-cart" onclick="addToCart(1)">
-                                    <i class="fas fa-shopping-cart" style="color: aliceblue;"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 2 -->
-                <div class="product-card" data-category="promo">
-                    <div class="product-box">
-                        <div class="promo-badge">-30%</div>
-                        <div class="product-img gradient-2">
-                            <img src="images/products/IMAGE-1.png" alt="Gentle Cleanser Foam">
-                        </div>
-                        <div class="product-info">
-                            <h3>Gentle Cleanser Foam</h3>
-                            <div class="rating">
-                                <div class="stars">
-                                    <i class="fas fa-star">★★★★☆</i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span>(87)</span>
-                            </div>
-                            <div class="price-cart">
-                                <div class="price-discount">
-                                    <span class="old-price">Rp 200.000</span>
-                                    <span class="price">Rp 140.000</span>
-                                </div>
-                                <button class="btn-cart" onclick="addToCart(2)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 3 -->
-                <div class="product-card" data-category="makeup">
-                    <div class="product-box">
-                        <div class="product-img gradient-3">
-                            <img src="images/products/IMAGE-2.png" alt="Matte Lipstick">
-                        </div>
-                        <div class="product-info">
-                            <h3>Matte Lipstick</h3>
-                            <div class="rating">
-                                <div class="stars">
-                                    <i class="fas fa-star">★★★★☆</i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span>(112)</span>
-                            </div>
-                            <div class="price-cart">
-                                <span class="price">Rp 150.000</span>
-                                <button class="btn-cart" onclick="addToCart(3)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card 4 -->
-                <div class="product-card" data-category="skincare">
-                    <div class="product-box">
-                        <div class="product-img gradient-4">
-                            <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
-                        </div>
-                        <div class="product-info">
-                            <h3>Brightening Eye Cream</h3>
-                            <div class="rating">
-                                <div class="stars">
-                                    <i class="fas fa-star">★★★★☆</i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span>(103)</span>
-                            </div>
-                            <div class="price-cart">
-                                <span class="price">Rp 520.000</span>
-                                <button class="btn-cart" onclick="addToCart(4)">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Products Grid -->
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <div class="product-card" data-category="skincare">
+            <div class="product-box">
+              <span class="badge sale">Sale</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE.png" alt="Hydrating Facial Cream">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fa-solid fa-heart"></i></button>
+                  <button class="btn-action"><i class="fa-solid fa-eye"></i></button>
+                </div>
+               <button class="btn-add-cart">
+                  <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+               </button>
+              </div>
+              <div class="product-info">
+                <h3>Hydrating Facial Cream</h3>
+                <div class="price-wrapper">
+                  <span class="price">$89.99</span>
+                  <span class="old-price">$129.99</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(24)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="product-card" data-category="promo">
+            <div class="product-box">
+              <span class="badge sale">Sale</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-1.png" alt="Gentle Cleanser Foam">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Gentle Cleanser Foam</h3>
+                <div class="price-wrapper">
+                  <span class="price">$140.00</span>
+                  <span class="old-price">$200.00</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(87)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card" data-category="makeup">
+            <div class="product-box">
+              <span class="badge new">New</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-2.png" alt="Matte Lipstick">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Matte Lipstick</h3>
+                <div class="price-wrapper">
+                  <span class="price">$59.99</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★★</span>
+                  <span>(112)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="product-card" data-category="skincare">
+            <div class="product-box">
+              <span class="badge new">New</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Brightening Eye Cream</h3>
+                <div class="price-wrapper">
+                  <span class="price">$520.00</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(103)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="product-card" data-category="skincare">
+            <div class="product-box">
+              <span class="badge new">New</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Brightening Eye Cream</h3>
+                <div class="price-wrapper">
+                  <span class="price">$520.00</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(103)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6 -->
+          <div class="product-card" data-category="skincare">
+            <div class="product-box">
+              <span class="badge new">New</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Brightening Eye Cream</h3>
+                <div class="price-wrapper">
+                  <span class="price">$520.00</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(103)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 7 -->
+          <div class="product-card" data-category="skincare">
+            <div class="product-box">
+              <span class="badge new">New</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Brightening Eye Cream</h3>
+                <div class="price-wrapper">
+                  <span class="price">$520.00</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(103)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 8 -->
+          <div class="product-card" data-category="skincare">
+            <div class="product-box">
+              <span class="badge new">New</span>
+              <div class="product-img">
+                <img src="images/products/IMAGE-3.png" alt="Brightening Eye Cream">
+                <div class="product-actions">
+                  <button class="btn-action"><i class="fas fa-heart"></i></button>
+                  <button class="btn-action"><i class="fas fa-eye"></i></button>
+                </div>
+                <button class="btn-add-cart">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+              </div>
+              <div class="product-info">
+                <h3>Brightening Eye Cream</h3>
+                <div class="price-wrapper">
+                  <span class="price">$520.00</span>
+                </div>
+                <div class="rating">
+                  <span class="stars">★★★★☆</span>
+                  <span>(103)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <!-- ===== OUR TRUSTED BRANDS ===== -->
+
+   <!-- ===== OUR TRUSTED BRANDS ===== -->
 <section class="brands-section">
   <div class="container">
     <h2 class="section-title text-center">Our Trusted Brands</h2>
     <div class="brands-grid">
-      <!-- Brand 1 -->
+      
+      <!-- Brand Card 1 -->
       <div class="brand-card">
         <img src="images/brand1.png" alt="Honiq">
-        <h3>Honiq</h3>
-        <p>Natural honey-infused skincare</p>
-        <a href="#" class="btn-brand">View Products</a>
+        <div class="brand-overlay">
+          <h3>Honiq</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        </div>
       </div>
 
-      <!-- Brand 2 -->
+      <!-- Brand Card 2 -->
       <div class="brand-card">
         <img src="images/brand2.png" alt="Hypure">
-        <h3>Hypure</h3>
-        <p>Hypoallergenic solutions for sensitive skin</p>
-        <a href="#" class="btn-brand">View Products</a>
+        <div class="brand-overlay">
+          <h3>Hypure</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        </div>
       </div>
 
-      <!-- Brand 3 -->
+      <!-- Brand Card 3 -->
       <div class="brand-card">
         <img src="images/brand3.png" alt="Jenuli">
-        <h3>Jenuli</h3>
-        <p>Premium anti-aging formulations</p>
-        <a href="#" class="btn-brand">View Products</a>
+        <div class="brand-overlay">
+          <h3>Jenuli</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
+<!-- ===== FULL IMAGE SLIDER (FULL WIDTH) ===== -->
+<section class="event-slider my-5">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
 
-<!-- ===== Slider ===== -->
-<section class="slider-section">
-    <div class="slider-container" id="slider">
-        
-        <div class="slide">
-            <div class="slide-text">
-                <h2>Diskon 30% untuk Pembelian Pertama</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <a href="#" class="btn">Beli Sekarang</a>
-            </div>
-            <div class="slide-image">
-                <img src="images/IMAGE1.png" alt="Produk 1">
-            </div>
-        </div>
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="images/events/event1.jpg" alt="Event 1">
+      </div>
 
-        <div class="slide">
-            <div class="slide-text">
-                <h2>Gratis Ongkir untuk Pesanan di Atas Rp 200rb</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <a href="#" class="btn">Belanja Sekarang</a>
-            </div>
-            <div class="slide-image">
-                <img src="images/IMAGE2.png" alt="Produk 2">
-            </div>
-        </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="images/events/event2.jpg" alt="Event 2">
+      </div>
 
-        <div class="slide">
-            <div class="slide-text">
-                <h2>Bundle Hemat: Beli 2 Gratis 1</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <a href="#" class="btn">Lihat Promo</a>
-            </div>
-            <div class="slide-image">
-                <img src="images/IMAGE1.png" alt="Produk 3">
-            </div>
-        </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="images/events/event3.jpg" alt="Event 3">
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <img src="images/events/event4.jpg" alt="Event 4">
+      </div>
 
     </div>
 
-    <div class="slider-controls">
-        <button id="prev">&#10094;</button>
-        <button id="next">&#10095;</button>
-    </div>
+    <!-- Navigasi -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 </section>
-
-<script src="js/slider.js"></script>
 
 <!-- ===== SECTION research-section ===== -->
 <section class="research-section">
@@ -565,7 +627,7 @@
             <i class="fas fa-map-marker-alt"></i>
             <div>
               <strong>Head Office</strong>
-              <p>123 Beauty Boulevard, Cosmetic District<br>New York, NY 10001, USA</p>
+              <p>Grand Galaxy RSOC No.12, RT.004/RW.019, Jaka Setia, <br> Bekasi Selatan, Bekasi, West Java 17147</p>
             </div>
           </div>
 
@@ -573,7 +635,7 @@
             <i class="fas fa-phone"></i>
             <div>
               <strong>Phone</strong>
-              <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+              <p>(021)28711175</p>
             </div>
           </div>
 
@@ -589,9 +651,9 @@
             <i class="fas fa-clock"></i>
             <div>
               <strong>Business Hours</strong>
-              <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
-                 Saturday: 10:00 AM - 4:00 PM<br>
-                 Sunday: Closed</p>
+              <p>Monday - Friday : 9:00 AM - 6:00 PM<br>
+                 Saturday - Sunday : Closed</p>
+                 
             </div>
           </div>
 
@@ -614,7 +676,7 @@
           <h4 class="contact-title">Google Maps</h4>
           <div class="map-placeholder">
             <!-- Ganti src iframe dengan embed maps asli -->
-            <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5117.507567940875!2d106.96855077603811!3d-6.271717361398188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d003c535047%3A0x5d144d9e227fcc34!2sPT%20Sareo%20Teknologi%20Indonesia!5e1!3m2!1sen!2sid!4v1756190050827!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -685,7 +747,62 @@
     });
 </script>
 
+<!-- Product Filter Script -->
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const products = document.querySelectorAll('.product-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.getAttribute('data-category');
+      products.forEach(product => {
+        if (category === 'all' || product.getAttribute('data-category') === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom Swiper Config -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2, // tablet
+        },
+        992: {
+          slidesPerView: 3, // desktop
+        }
+      }
+    });
+  </script>
 
 
 </body>
 </html>
+
+
+        

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const notLoggedEls = navbarPlaceholder.querySelectorAll(".d-user-not-logged");
 
         if (loggedEls.length > 0 && notLoggedEls.length > 0) {
-          const isLoggedIn = false; // Ganti sesuai status login
+          const isLoggedIn = true; // Ganti sesuai status login
 
           loggedEls.forEach(el => {
             el.style.setProperty("display", isLoggedIn ? "inline-block" : "none", "important");
@@ -91,4 +91,5 @@ document.addEventListener("click", function (e) {
     window.location.href = newUrl;
   }
 });
+
 

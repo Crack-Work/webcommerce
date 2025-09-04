@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light w-100 px-0">
       <!-- Logo -->
       <a class="navbar-brand d-flex align-items-center gap-2 me-auto" href="index.html">
-        <img src="images/logo.png" alt="Logo" class="logo-img">
+        <img src="images/logo1.png" alt="Logo" class="logo-img">
       </a>
 
       <!-- Mobile toggle -->
@@ -15,17 +15,36 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-3">
           <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Belanja</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="shop.html?brand=jenauli" data-brand="jenauli">Jenauli</a></li>
-              <li><a class="dropdown-item" href="shop.html?brand=hypure" data-brand="hypure">Hypure</a></li>
-              <li><a class="dropdown-item" href="shop.html?brand=honiq" data-brand="honiq">Honiq</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=jenauli">Jenauli</a></li>
-          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=hypure">Hypure</a></li>
-          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=honiq">Honiq</a></li>
+          <li class="nav-item dropdown mega-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Shop </a>
+          <div class="dropdown-menu mega-menu p-4">
+            <div class="row">
+              <div class="col-md-2">
+                <h6 class="fw-bold">A-B</h6>
+                <a class="dropdown-item" href="shop.html?brand=adidas" data-brand="adidas">A brand 1</a>
+                <a class="dropdown-item" href="shop.html?brand=airwalk" data-brand="airwalk">B brand 1</a>
+                <a class="dropdown-item" href="shop.html?brand=anta" data-brand="anta">A brand 2</a>
+              </div>
+              <div class="col-md-2">
+                <h6 class="fw-bold">C-D</h6>
+                <a class="dropdown-item" href="shop.html?brand=converse" data-brand="converse">C brand 1</a>
+                <a class="dropdown-item" href="shop.html?brand=crocs" data-brand="crocs">C brand 2</a>
+                <a class="dropdown-item" href="shop.html?brand=diadora" data-brand="diadora">D brand 3</a>
+              </div>
+              <div class="col-md-2">
+                <h6 class="fw-bold">E-J</h6>
+                <a class="dropdown-item" href="shop.html?brand=Honiq" data-brand="honiq">Honiq</a>
+                <a class="dropdown-item" href="shop.html?brand=jenauli" data-brand="jenauli">Jenauli</a>
+                <a class="dropdown-item" href="shop.html?brand=hypure" data-brand="hypure">Hypure</a>
+              </div>
+              <!-- Tambah kolom baru sesuai kebutuhan -->
+            </div>
+          </div>
+        </li>
+
+          <li class="nav-item"><a class="nav-link" href="tips-kecantikan.html?brand=jenauli">Stay Informed & Inspired</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Model Business</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
         </ul>
       </div>
 

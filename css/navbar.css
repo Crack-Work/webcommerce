@@ -1,4 +1,4 @@
-/* navbar.css */
+* navbar.css */
 
 /* Struktur utama */
 .main-header {
@@ -37,7 +37,8 @@
 }
 
 /* Dropdown */
-.dropdown-menu {
+/*.dropdown-menu {
+  background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
@@ -95,4 +96,111 @@
 .notif-star {
   color: gold;
   margin-right: 5px;
+}
+
+/* Mega Menu khusus Shop */
+.mega-dropdown {
+  position: static; /* biar bisa full width */
+}
+
+.mega-menu {
+  width: 100%; /* selebar navbar */
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 0;
+  padding: 30px 60px; /* kasih ruang kiri kanan biar lega */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Grid kolom brand */
+.mega-menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.mega-menu .col-md-2 {
+  flex: 0 0 16.66%; /* otomatis 6 kolom */
+  max-width: 16.66%;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.mega-menu h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.mega-menu .dropdown-item {
+  padding: 4px 0;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.mega-menu .dropdown-item:hover {
+  background: transparent;
+  color: #2198D6;
+}
+
+/* Responsive Mega Menu */
+@media (max-width: 991px) { /* berlaku untuk tablet & hp */
+  .mega-menu {
+    width: 100% !important;
+    padding: 15px;
+  }
+
+  .mega-menu .row {
+    display: block; /* susun kebawah */
+  }
+
+  .mega-menu .col-md-2 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+
+  .mega-menu h6 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  .mega-menu .dropdown-item {
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Navbar mobile menu background */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;      /* biar nempel ke layar */
+    top: 90px;            /* sesuaikan dengan tinggi header kamu */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 90px); /* penuh sisa layar */
+    background: #fff;
+    padding: 20px;
+    overflow-y: auto;     /* kalau menunya panjang bisa scroll */
+    z-index: 1050;        /* lebih tinggi dari konten lain */
+    border-radius: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .navbar-collapse .nav-link {
+    color: #333;        /* biar lebih kontras */
+    padding: 10px 0;
+  }
+
+  .navbar-collapse .nav-link:hover {
+    color: #2198D6;     /* warna hover tetap biru */
+  }
 }

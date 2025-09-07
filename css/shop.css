@@ -1046,7 +1046,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.3s ease;
-  height: 400px;
+  height: 430px;
 }
 .product-card:hover {
   transform: translateY(-6px);
@@ -1160,6 +1160,7 @@
 
 .price { font-weight: 700; color: #2779B0; }
 .old-price { font-size: 13px; color: #9ca3af; text-decoration: line-through; }
+.tag-terjual { font-size: 12px; color: #9ca3af; }
 .rating { font-size: 14px; color: #facc15; }
 
 /* Responsive */

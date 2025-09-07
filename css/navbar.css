@@ -1,4 +1,11 @@
-* navbar.css */
+/* navbar.css */
+
+.logobrand{
+  color: #2198D6;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* Struktur utama */
 .main-header {
@@ -204,3 +211,4 @@
     color: #2198D6;     /* warna hover tetap biru */
   }
 }
+

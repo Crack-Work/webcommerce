@@ -8,6 +8,7 @@
   <!-- Bootstrap & Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=sans-serif:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/navbar.css" />
@@ -32,15 +33,15 @@
           </div>
 
           <form id="register-form">
-            <div class="form-field"><label>Name</label><input type="text" required /></div>
-            <div class="form-field"><label>Phone Number</label><input type="tel" required /></div>
-            <div class="form-field"><label>Password</label><input type="password" required /></div>
-            <div class="form-field"><label>Confirm Password</label><input type="password" required /></div>
+            <div class="form-field"><label>Name</label><input type="text" placeholder="Input your name" required /></div>
+            <div class="form-field"><label>Phone Number</label><input type="number" placeholder="Input your phone number" required /></div>
+            <div class="form-field"><label>Password</label><input type="password" placeholder="Input your password" required /></div>
+            <div class="form-field"><label>Confirm Password</label><input type="password" placeholder="Confirm your password" required /></div>
 
             <div class="membership-section">
               <label>Membership Type</label>
               <div class="membership-options">
-                <div class="checkbox-option"><input type="checkbox" id="memberBiasa"/><label for="memberBiasa">Member Biasa</label></div>
+                <div class="checkbox-option"><input type="checkbox" id="memberBiasa" type="checkbox" id="memberBiasa" name="memberType" value="memberBiasa" checked onclick="return false;"/><label for="memberBiasa">Member Biasa</label></div>
                 <div class="checkbox-option"><input type="checkbox" id="mlmMember" onchange="toggleMlmFields()"/><label for="mlmMember">MLM Member</label></div>
                 <div class="checkbox-option"><input type="checkbox" id="affiliate" onchange="toggleAffiliateFields()"/><label for="affiliate">Affiliate</label></div>
               </div>
@@ -51,7 +52,7 @@
             </div>
 
             <div id="affiliateFields" class="affiliate-wrapper" style="display:none">
-              <div class="form-field"><label>Social Media Platform</label>
+              <div class="form-field"><label>Select Social Media</label>
                 <select>
                   <option value="">Select platform</option>
                   <option value="instagram">Instagram</option>
@@ -62,7 +63,7 @@
                   <option value="linkedin">LinkedIn</option>
                 </select>
               </div>
-              <div class="form-field"><label>Username</label><input type="text"/></div>
+              <div class="form-field"><label>Your Username</label><input type="text"/></div>
             </div>
 
             <div class="terms-section">
@@ -111,6 +112,9 @@
         return;
       }
       alert('Account created successfully!');
+      // Redirect ke halaman verify
+      window.location.href = "verifynumber.html";
+
     });
   </script>
 </body>
